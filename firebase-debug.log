@@ -1,0 +1,52 @@
+[debug] [2026-05-05T18:08:23.134Z] ----------------------------------------------------------------------
+[debug] [2026-05-05T18:08:23.144Z] Command:       /usr/bin/node /home/credicasa-pc03/Code/portfolio/node_modules/.bin/firebase emulators:start --only hosting --project tiemi-fujiwara
+[debug] [2026-05-05T18:08:23.146Z] CLI Version:   13.35.1
+[debug] [2026-05-05T18:08:23.147Z] Platform:      linux
+[debug] [2026-05-05T18:08:23.147Z] Node Version:  v18.19.1
+[debug] [2026-05-05T18:08:23.148Z] Time:          Tue May 05 2026 15:08:23 GMT-0300 (Horário Padrão de Brasília)
+[debug] [2026-05-05T18:08:23.149Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-05-05T18:08:24.096Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-05-05T18:08:24.098Z] > authorizing via signed-in user (mariaclarafujiwara@gmail.com)
+[info] i  emulators: Starting emulators: hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: hosting"}}
+[debug] [2026-05-05T18:08:24.120Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-05-05T18:08:24.121Z] [hosting] Hosting Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-05-05T18:08:24.123Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2026-05-05T18:08:24.164Z] [hub] writing locator at /tmp/hub-tiemi-fujiwara.json
+[debug] [2026-05-05T18:08:24.262Z] Checked if tokens are valid: true, expires at: 1778007396571
+[debug] [2026-05-05T18:08:24.264Z] Checked if tokens are valid: true, expires at: 1778007396571
+[debug] [2026-05-05T18:08:24.270Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/tiemi-fujiwara/sites 
+[debug] [2026-05-05T18:08:25.758Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/tiemi-fujiwara/sites 200
+[debug] [2026-05-05T18:08:25.759Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/tiemi-fujiwara/sites {"sites":[{"name":"projects/tiemi-fujiwara/sites/tiemi-fujiwara","defaultUrl":"https://tiemi-fujiwara.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2026-05-05T18:08:25.760Z] Checked if tokens are valid: true, expires at: 1778007396571
+[debug] [2026-05-05T18:08:25.760Z] Checked if tokens are valid: true, expires at: 1778007396571
+[debug] [2026-05-05T18:08:25.761Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/tiemi-fujiwara/webApps/-/config [none]
+[debug] [2026-05-05T18:08:26.637Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/tiemi-fujiwara/webApps/-/config 200
+[debug] [2026-05-05T18:08:26.637Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/tiemi-fujiwara/webApps/-/config {"projectId":"tiemi-fujiwara","storageBucket":"tiemi-fujiwara.firebasestorage.app","apiKey":"AIzaSyAkYQ18yuuU_pliUFJImTX9Halv2j6DMsQ","authDomain":"tiemi-fujiwara.firebaseapp.com","messagingSenderId":"714260674676","projectNumber":"714260674676","version":"2"}
+[debug] [2026-05-05T18:08:26.651Z] Checked if tokens are valid: true, expires at: 1778007396571
+[debug] [2026-05-05T18:08:26.652Z] Checked if tokens are valid: true, expires at: 1778007396571
+[debug] [2026-05-05T18:08:26.655Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/tiemi-fujiwara [none]
+[debug] [2026-05-05T18:08:27.087Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/tiemi-fujiwara 200
+[debug] [2026-05-05T18:08:27.087Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/tiemi-fujiwara {"projectId":"tiemi-fujiwara","projectNumber":"714260674676","displayName":"tiemi-fujiwara","name":"projects/tiemi-fujiwara","resources":{"hostingSite":"tiemi-fujiwara"},"state":"ACTIVE","etag":"1_dc80c6c2-9853-42c1-8a4c-00c3d647e86d"}
+[info] ✔  hosting[tiemi-fujiwara]: Local server: http://127.0.0.1:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://127.0.0.1:5000\u001b[22m\u001b[24m"}}
+[warn] ⚠  emulators: The Emulator UI is not starting, either because none of the running emulators have a UI component or the Emulator UI cannot determine the Project ID. Pass the --project flag to specify a project. {"metadata":{"emulator":{"name":"hub"},"message":"The Emulator UI is not starting, either because none of the running emulators have a UI component or the Emulator UI cannot determine the Project ID. Pass the --project flag to specify a project."}}
+[debug] [2026-05-05T18:08:27.179Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: connect ECONNREFUSED 127.0.0.1:40001. If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+└─────────────────────────────────────────────────────────────┘
+
+┌──────────┬────────────────┐
+│ Emulator │ Host:Port      │
+├──────────┼────────────────┤
+│ Hosting  │ 127.0.0.1:5000 │
+└──────────┴────────────────┘
+  Emulator Hub host: 127.0.0.1 port: 4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[info] i  hosting: 127.0.0.1 - - [05/May/2026:18:08:32 +0000] "GET / HTTP/1.1" 200 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [05/May/2026:18:08:32 +0000] \"GET / HTTP/1.1\" 200 - \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [05/May/2026:18:08:33 +0000] "GET /assets/themify-icons/fonts/themify.woff?-fvbane HTTP/1.1" 200 56108 "http://127.0.0.1:5000/assets/themify-icons/themify-icons.css" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [05/May/2026:18:08:33 +0000] \"GET /assets/themify-icons/fonts/themify.woff?-fvbane HTTP/1.1\" 200 56108 \"http://127.0.0.1:5000/assets/themify-icons/themify-icons.css\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [05/May/2026:18:12:35 +0000] "GET / HTTP/1.1" 200 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [05/May/2026:18:12:35 +0000] \"GET / HTTP/1.1\" 200 - \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [05/May/2026:18:12:36 +0000] "GET /assets/themify-icons/fonts/themify.woff?-fvbane HTTP/1.1" 200 56108 "http://127.0.0.1:5000/assets/themify-icons/themify-icons.css" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [05/May/2026:18:12:36 +0000] \"GET /assets/themify-icons/fonts/themify.woff?-fvbane HTTP/1.1\" 200 56108 \"http://127.0.0.1:5000/assets/themify-icons/themify-icons.css\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36\""}}
