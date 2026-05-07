@@ -505,9 +505,10 @@ header .row {
 }
 
 #quotes h2 {
-  font-family: 'Poppins', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, sans-serif;
-  font-weight: 300;
-  font-size: 30px;
+  font-family: "Story Script", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
   margin: 0px;
   padding: 15px 0px;
   color: #000000;
