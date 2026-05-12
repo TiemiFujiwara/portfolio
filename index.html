@@ -827,26 +827,26 @@
 			</div>
 			<div class="row top-pad sub-icon">
 				<div class="col-md-8 col-md-offset-2">
-					<form class="form-horizontal" method="post" action="email.php">
+					<form class="form-horizontal" id="contactForm">
 						<div class="form-group">
 							<div class="col-md-12">
-
+	
 								<!-- Email Confirmation Success -->
-								<p class="confirmation send-success"><span class="ti-check-box"></span>Seu email foi enviado com sucesso.</p>
+								<p id="msgSuccess" class="confirmation send-success" style="display:none;"><span
+										class="ti-check-box"></span>
+									Enviado com sucesso!</p>
 								<!-- Email Confirmation Error -->
-								<p class="confirmation send-error"><span class="ti-alert"></span>Ocorreu um problema com o envio do email ...</p>
-
-								<input class="form-control" type="text" name="name" placeholder="Nome"
-									required="required">
-								<input class="form-control" type="text" name="subject" placeholder="Assunto"
-									required="required">
-								<input class="form-control" type="email" name="email" placeholder="Email"
-									required="required">
-								<textarea class="form-control" name="message" rows="4" placeholder="Mensagem"
-									required="required"></textarea>
-								<button type="submit" class="btn custom-btn-2 wow fadeInUp" data-wow-duration="1s"
-									data-wow-delay=".5s">Enviar</button>
-
+								<p id="msgError" class="confirmation send-error" style="display:none;"><span
+										class="ti-alert"></span> Erro ao
+									enviar.</p>
+	
+								<input id="userName" class="form-control" type="text" placeholder="Nome" required>
+								<input id="userSubject" class="form-control" type="text" placeholder="Assunto" required>
+								<input id="userEmail" class="form-control" type="email" placeholder="Email" required>
+								<textarea id="userMessage" class="form-control" rows="4" placeholder="Mensagem"
+									required></textarea>
+	
+								<button type="submit" class="btn custom-btn-2">Enviar</button>
 							</div>
 						</div>
 					</form>
@@ -888,6 +888,30 @@
 
 	<!-- custom js -->
 	<script src="assets/js/custom.js"></script>
+<script>
+	const formulario = document.getElementById('contactForm');
+	const feedbackSucesso = document.getElementById('msgSuccess');
+	const feedbackErro = document.getElementById('msgError');
+	// 2. Escutamos o evento de "submissão"
+	formulario.addEventListener('submit', function (event) {
+		// Evita que a página recarregue
+		event.preventDefault();
+		// 3. Criamos um objeto para organizar os dados (Padrão JSON)
+		const dadosFormulario = {
+			nome: document.getElementById('userName').value,
+			assunto: document.getElementById('userSubject').value,
+			email: document.getElementById('userEmail').value,
+			mensagem: document.getElementById('userMessage').value
+		};
+		// 4. Exibição para o aluno entender o que foi gerado
+		console.log("Dados prontos para o Backend (JSON):", dadosFormulario);
+		alert("Dados capturados com sucesso! Olhe o Console (F12).");
+		// Exemplo de como mostrar a mensagem de sucesso na tela
+		feedbackSucesso.style.display = 'block';
+		// Opcional: Limpar o formulário após o envio
+		formulario.reset();
+	});
+</script>
 
 </body>
 
