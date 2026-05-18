@@ -905,24 +905,49 @@
 	const formulario = document.getElementById('contactForm');
 	const feedbackSucesso = document.getElementById('msgSuccess');
 	const feedbackErro = document.getElementById('msgError');
-	// 2. Escutamos o evento de "submissão"
-	formulario.addEventListener('submit', function (event) {
-		// Evita que a página recarregue
+
+	// Endpoint do backend (Cloud Function "receberContato")
+	// - Em produção (Firebase Hosting), o /api/contato é redirecionado pra function
+	// - No emulador local também funciona porque o emulador de hosting respeita os rewrites
+	const ENDPOINT_BACKEND = '/api/contato';
+
+	formulario.addEventListener('submit', async function (event) {
 		event.preventDefault();
-		// 3. Criamos um objeto para organizar os dados (Padrão JSON)
+
+		// Esconde mensagens anteriores
+		feedbackSucesso.style.display = 'none';
+		feedbackErro.style.display = 'none';
+
+		// Monta o JSON com os dados do formulário
 		const dadosFormulario = {
 			nome: document.getElementById('userName').value,
 			assunto: document.getElementById('userSubject').value,
 			email: document.getElementById('userEmail').value,
 			mensagem: document.getElementById('userMessage').value
 		};
-		// 4. Exibição para o aluno entender o que foi gerado
-		console.log("Dados prontos para o Backend (JSON):", dadosFormulario);
-		alert("Dados capturados com sucesso! Olhe o Console (F12).");
-		// Exemplo de como mostrar a mensagem de sucesso na tela
-		feedbackSucesso.style.display = 'block';
-		// Opcional: Limpar o formulário após o envio
-		formulario.reset();
+
+		console.log("Enviando para o backend:", dadosFormulario);
+
+		try {
+			const resposta = await fetch(ENDPOINT_BACKEND, {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(dadosFormulario)
+			});
+
+			const resultado = await resposta.json();
+			console.log("Resposta do backend:", resultado);
+
+			if (resposta.ok && resultado.ok) {
+				feedbackSucesso.style.display = 'block';
+				formulario.reset();
+			} else {
+				feedbackErro.style.display = 'block';
+			}
+		} catch (erro) {
+			console.error("Erro ao enviar para o backend:", erro);
+			feedbackErro.style.display = 'block';
+		}
 	});
 </script>
 

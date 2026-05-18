@@ -8,6 +8,8 @@
       "package.json",
       "package-lock.json",
       "**/node_modules/**",
+      "functions/**",
+      "BACKEND-INSTRUCOES.txt",
       "email.php"
     ],
     "headers": [
@@ -41,9 +43,41 @@
     ],
     "rewrites": [
       {
+        "source": "/api/contato",
+        "function": {
+          "functionId": "receberContato",
+          "region": "us-central1"
+        }
+      },
+      {
         "source": "**",
         "destination": "/index.html"
       }
     ]
+  },
+  "functions": [
+    {
+      "source": "functions",
+      "codebase": "default",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log",
+        "*.local"
+      ]
+    }
+  ],
+  "emulators": {
+    "functions": {
+      "port": 5001
+    },
+    "hosting": {
+      "port": 5000
+    },
+    "ui": {
+      "enabled": true
+    },
+    "singleProjectMode": true
   }
 }

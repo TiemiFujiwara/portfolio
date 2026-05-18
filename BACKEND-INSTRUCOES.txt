@@ -1,0 +1,200 @@
+==========================================================
+  GUIA DO BACKEND DO PORTFOLIO - PARA O ESTAGIARIO
+==========================================================
+
+OBJETIVO
+--------
+O site (frontend) tem um formulario de contato. Quando alguem
+preenche e clica em "Enviar", os dados precisam chegar em algum
+lugar - esse "algum lugar" e o BACKEND.
+
+Aqui o backend e uma Cloud Function do Firebase chamada
+"receberContato". Ela:
+  1. Recebe o JSON do formulario por HTTP POST
+  2. Valida os campos
+  3. Faz console.log dos dados (aparece nos LOGS do Cloud Functions)
+  4. Responde { ok: true } pro frontend
+
+
+ESTRUTURA DOS ARQUIVOS
+----------------------
+portfolio/
+├── index.html              <- Frontend (formulario faz fetch pro backend)
+├── firebase.json           <- Configuracao do Firebase (hosting + functions)
+├── functions/              <- AQUI MORA O BACKEND
+│   ├── index.js            <- Codigo da Cloud Function
+│   ├── package.json        <- Dependencias do backend (firebase-functions)
+│   └── .gitignore
+└── BACKEND-INSTRUCOES.txt  <- Este arquivo
+
+
+COMO FUNCIONA O FLUXO
+---------------------
+[Navegador do usuario]
+     |
+     | 1. Usuario clica em "Enviar"
+     v
+[JavaScript no index.html]
+     |
+     | 2. fetch('/api/contato', { method: 'POST', body: JSON })
+     v
+[Firebase Hosting]
+     |
+     | 3. firebase.json reescreve /api/contato -> Cloud Function
+     v
+[Cloud Function "receberContato" - functions/index.js]
+     |
+     | 4. console.log(dados)  --> aparece nos LOGS
+     | 5. Responde { ok: true }
+     v
+[Volta pro navegador, mostra "Enviado com sucesso!"]
+
+
+==========================================================
+  PASSO 1 - INSTALAR AS FERRAMENTAS (so na primeira vez)
+==========================================================
+
+1. Instale o Node.js 20:
+   https://nodejs.org/
+
+2. Instale o Firebase CLI globalmente:
+   npm install -g firebase-tools
+
+3. Faca login no Firebase:
+   firebase login
+
+4. Instale as dependencias do backend:
+   cd functions
+   npm install
+   cd ..
+
+
+==========================================================
+  PASSO 2 - TESTAR LOCALMENTE COM O EMULADOR
+==========================================================
+
+O emulador roda o backend no seu computador, sem precisar
+fazer deploy. E o jeito mais rapido de testar.
+
+Na pasta "portfolio", rode:
+
+   firebase emulators:start
+
+Isso vai abrir 2 servicos:
+  - Hosting:  http://localhost:5000   (o site)
+  - Functions: http://localhost:5001  (o backend)
+  - Emulator UI: http://localhost:4000 (painel pra ver logs)
+
+Agora:
+  1. Abra http://localhost:5000 no navegador
+  2. Va ate o formulario de contato
+  3. Preencha e clique em Enviar
+  4. Veja a mensagem "Enviado com sucesso!" aparecer
+  5. Olhe o TERMINAL onde o emulador esta rodando -
+     os console.log da function aparecem ali em tempo real
+  6. Tambem da pra ver os logs no Emulator UI:
+     http://localhost:4000 -> aba "Functions" -> "Logs"
+
+
+COMO TESTAR O BACKEND SOZINHO (sem o site) - usando curl:
+---------------------------------------------------------
+Abra outro terminal e rode:
+
+   curl -X POST http://localhost:5001/tiemi-fujiwara/us-central1/receberContato \
+     -H "Content-Type: application/json" \
+     -d '{"nome":"Joao","assunto":"Teste","email":"joao@teste.com","mensagem":"Ola"}'
+
+Resposta esperada:
+   {"ok":true,"mensagem":"Contato recebido com sucesso!"}
+
+
+==========================================================
+  PASSO 3 - VER OS DADOS NO CONSOLE.LOG
+==========================================================
+
+DURANTE O EMULADOR (local):
+---------------------------
+  - Olhe o terminal onde "firebase emulators:start" esta rodando
+  - OU acesse http://localhost:4000 -> Functions -> Logs
+
+EM PRODUCAO (depois do deploy):
+-------------------------------
+Opcao A - Pelo terminal:
+   firebase functions:log
+
+   Pra acompanhar em tempo real (parecido com tail -f):
+   firebase functions:log --only receberContato
+
+Opcao B - Pelo Console Web do Firebase:
+   1. Acesse https://console.firebase.google.com
+   2. Selecione o projeto "tiemi-fujiwara"
+   3. Menu lateral -> "Functions"
+   4. Clique na funcao "receberContato"
+   5. Aba "Logs"
+
+Opcao C - Direto no Google Cloud Console (mais detalhado):
+   https://console.cloud.google.com/logs
+   Filtro: resource.type="cloud_function"
+           resource.labels.function_name="receberContato"
+
+
+==========================================================
+  PASSO 4 - DEPLOY (publicar o backend de verdade)
+==========================================================
+
+IMPORTANTE: Cloud Functions exige o plano "Blaze" (pague pelo uso)
+no Firebase. Tem uma franquia gratuita generosa, mas precisa
+ter cartao cadastrado. Configure em:
+  https://console.firebase.google.com/project/tiemi-fujiwara/usage/details
+
+Comandos de deploy:
+
+  # Deploy apenas das functions (backend)
+  firebase deploy --only functions
+
+  # Deploy apenas do hosting (site)
+  firebase deploy --only hosting
+
+  # Deploy de tudo junto (recomendado quando mexer nos dois)
+  firebase deploy
+
+Depois do deploy:
+  - O site fica em: https://tiemi-fujiwara.web.app
+  - O formulario passa a falar com a function de verdade
+  - Os logs aparecem em "firebase functions:log"
+
+
+==========================================================
+  CHECKLIST RAPIDO PRA O ESTAGIARIO
+==========================================================
+
+[ ] Instalei Node.js e firebase-tools
+[ ] Rodei "npm install" dentro de functions/
+[ ] Rodei "firebase emulators:start"
+[ ] Abri http://localhost:5000 e enviei o formulario
+[ ] Vi os dados aparecerem no terminal (console.log)
+[ ] Testei com curl direto na function
+[ ] Quando tudo funcionou local, rodei "firebase deploy"
+[ ] Vi os logs em producao com "firebase functions:log"
+
+
+==========================================================
+  PROBLEMAS COMUNS
+==========================================================
+
+"Error: HTTP Error: 403" no deploy
+  -> Precisa ativar o plano Blaze (cartao no Firebase).
+
+"CORS error" no navegador
+  -> No emulador, use SEMPRE http://localhost:5000 (hosting),
+     nao http://localhost:5001 direto. O rewrite resolve CORS.
+
+"Function not found" no deploy
+  -> Verifique se o nome em functions/index.js bate com o
+     "functionId" no firebase.json (deve ser "receberContato").
+
+"npm install" falha
+  -> Verifique se o Node esta na versao 20 (node --version).
+
+
+==========================================================
