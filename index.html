@@ -7,6 +7,10 @@
   <title>Tiemi's Desktop</title>
   <link href="assets/img/iconsite.png" rel="icon" type="image/x-icon">
   <meta name="robots" content="noindex">
+
+  <!--CSS-->
+  <link rel="stylesheet" href="assets/css/main.css">
+
 </head>
 
 <body>
@@ -14,12 +18,12 @@
   <!--Interface's control = Light and Dark mode alogside Sound toggle-->
   <header class="interface-control">
     <button class="icon-type" id="theme-mode">
-      <img alt="Light mode" src="sun icon"  >
-      <img alt="Dark mode" src="moon icon" >
+      <img alt="Light mode" src="sun icon" class="icon-mode, show">
+      <img alt="Dark mode" src="moon icon" class="icon-mode, hidden">
     </button>
     <button>
-      <img alt="Sound on" src="active sound icon" >
-      <img alt="Sound off" src="muted sound icon" >
+      <img alt="Sound on" src="active sound icon" class="sound-mode, show">
+      <img alt="Sound off" src="muted sound icon" class="sound-mode, hidden">
     </button>
   </header>
 
@@ -31,18 +35,24 @@
       <div class="window-bar">home</div>
       <div class="window-box">
         <h1>Olá! Eu sou a Tiemi.</h1>
+          <button>
+              <img alt="About me" src="aboutmeicon" class="main-icon-button">
+              <img alt="Links" src="linksicon" class="main-icon-button">
+              <img alt="Portfolio" src="portfolioicon" class="main-icon-button">
+              <img alt="Contact" src="contacticon" class="main-icon-button">
+          </button>
       </div>
     </div>
 
     <!--About Me Window-->
-    <div class="about-window">
+    <div class="about-window, hidden">
       <div class="window-bar">
         <span>about</span>
         <button class="close-window-button">[x]</button>
       </div>
       <div class="window-box">
         <section class="about-content">
-          <img alt="Profile photo of the owner of this site" src="avatar photo" />
+          <img alt="Profile photo of the owner of this site" src="avatar photo">
           <div class="profile-content">
             <h2 class="profile-name">Tiemi Fujiwara</h2>
             <p>Designer Digital, Ilustradora Freelancer e futura Desenvolvedora Web</p>
@@ -54,7 +64,7 @@
             </ul>
 
             <h3 class="caption-style">Formação Acadêmica</h3>
-            <img alt="Logo da Pontifícia Universidade Católica de Campinas" src="pucc logo" />
+            <img alt="Logo da Pontifícia Universidade Católica de Campinas" src="pucc logo">
             <p>Cursando Design Digital</p>
             <p>Pontifícia Universidade Católica de Campinas 2024</p>
 
@@ -75,7 +85,7 @@
     </div>
 
     <!--Links Window-->
-    <div class="links-window">
+    <div class="links-window, hidden">
       <div class="window-bar">
         <span>links</span>
         <button class="close-window-button">[x]</button>
@@ -101,7 +111,7 @@
     </div>
 
     <!--Portfolio Window-->
-    <div class="portfolio-window">
+    <div class="portfolio-window, hidden">
       <div class="window-bar">
         <span>portfolio</span>
         <button class="close-window-button">[x]</button>
@@ -128,7 +138,7 @@
     </div>
 
     <!--Contact Window-->
-    <div class="contact-window">
+    <div class="contact-window, hidden">
       <div class="window-bar">
         <span>contato</span>
         <button class="close-window-button">[x]</button>
