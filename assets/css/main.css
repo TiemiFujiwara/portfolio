@@ -1,3 +1,38 @@
+/* Background */
+
+body {
+    background:linear-gradient(to bottom, #5e8cff,#ffe57b);
+    min-height: 100vh;
+    margin: 0;
+    font-family: "Roboto Mono", monospace;
+}
+
+/* Interface */
+
+.png-icons {
+    position:absolute;
+    background: none;
+    border: none;
+    padding: none;
+    cursor: pointer;
+}
+
+.png-icons img {
+    width: 80px;
+    height: auto;
+}
+
+#theme-button {
+    top: 25px;
+    left: 20px;
+}
+
+#sound-button {
+    top: 25px;
+    left: 120px;
+}
+
+/* Hidden for now */
 
 .hidden {
     display: none;
