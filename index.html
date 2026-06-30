@@ -17,13 +17,15 @@
 
   <!--Interface's control = Light and Dark mode alogside Sound toggle-->
   <header class="interface-control">
-    <button class="icon-type" id="theme-mode">
-      <img alt="Light mode" src="sun icon" class="icon-mode, show">
-      <img alt="Dark mode" src="moon icon" class="icon-mode, hidden">
+    <button class="png-icons" id="theme-button">
+      <img alt="Light mode" src="assets/img/icon/lighticon.png" class="icon-mode, show">
+      <img alt="Dark mode" src="assets/img/icon/darkicon.png" class="icon-mode, hidden">
     </button>
-    <button>
-      <img alt="Sound on" src="active sound icon" class="sound-mode, show">
-      <img alt="Sound off" src="muted sound icon" class="sound-mode, hidden">
+    <button class="png-icons" id="sound-button">
+      <img alt="Sound on light mode" src="assets/img/icon/soundlighticon.png" class="sound-mode, show">
+      <img alt="Sound off light mode" src="assets/img/icon/mutelighticon.png" class="sound-mode, hidden">
+      <img alt="Sound on dark mode" src="assets/img/icon/sounddarkicon.png" class="sound-mode, hidden">
+      <img alt="Sound off dark mode" src="assets/img/icon/mutedarkicon.png" class="sound-mode, hidden">
     </button>
   </header>
 
@@ -35,12 +37,19 @@
       <div class="window-bar">home</div>
       <div class="window-box">
         <h1>Olá! Eu sou a Tiemi.</h1>
-          <button>
-              <img alt="About me" src="aboutmeicon" class="main-icon-button">
-              <img alt="Links" src="linksicon" class="main-icon-button">
-              <img alt="Portfolio" src="portfolioicon" class="main-icon-button">
-              <img alt="Contact" src="contacticon" class="main-icon-button">
+          <button class="main-icon-button">
+            <img alt="About me" src="aboutmeicon">
           </button>
+          <button class="main-icon-button">
+           <img alt="Links" src="linksicon">
+          </button>
+          <button class="main-icon-button">
+           <img alt="Portfolio" src="portfolioicon">
+          </button>
+          <button class="main-icon-button">
+            <img alt="Contact" src="contacticon">
+            </button>
+          
       </div>
     </div>
 
