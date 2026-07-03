@@ -47,23 +47,25 @@ body {
 /* Main Desktop */
 
 .home-window {
-    width: 850px;
-    height:470px;
+    width: 800px;
+    height: 439px;
     margin: 100px 0px 0px 45px; 
+    border: solid 4px #46506c;
     box-shadow: 8px 8px 0px rgba(33, 54, 112, 0.15); 
 }
 
 .window-bar {
     background-color: #1f2538;
     color: white;
+    border-bottom: solid 4px #46506c;
     padding: 7px 12px;
     font-family: "Geist Pixel", sans-serif;
     font-size: 20px; 
 }
 
 .window-box {
-    background-color: rgb(201, 230, 255);
-    padding: 60px 0px 60px 60px;
+    background-color: rgb(255, 255, 255);
+    padding: 60px 0px 33px 50px;
     display: flex;
     flex-direction: column;
 }
@@ -85,14 +87,14 @@ body {
 .main-icon-button {
     background: none;
     border: none;
-    padding: 10px;
+    padding: 2%;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 90px;
     font-weight: bold;
-    gap: 20px; 
+    gap: 0px; 
 }
 
 .icon-container {
@@ -110,7 +112,9 @@ body {
 }
 
 .name-icon {
-    margin-top: 1%;
+    margin-top: 0%;
+    color: #2D3650;
+    font-family: "Geist Pixel", sans-serif;
 }
 
 /* Hidden for now */
