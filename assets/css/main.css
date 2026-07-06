@@ -142,7 +142,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 90px;
+    width: 105px;
     font-weight: bold;
     gap: 0px; 
 }
