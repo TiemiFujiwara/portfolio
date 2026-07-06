@@ -1,7 +1,8 @@
-/* Background */
 * {
     box-sizing: border-box;
 }
+
+/* Background */
 
 body {
     margin: 0;
@@ -9,9 +10,52 @@ body {
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    background:linear-gradient(to bottom, #5e8cff,#ffe57b);
+    background:linear-gradient(to bottom, #4b99ff,#ffc96c,#fff490);
     min-height: 100vh;
 }
+
+.scenery-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.scenery-layer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.clouds-group {
+    top: 0;
+    height: 50vh;
+}
+
+.cloud-1 { }
+.cloud-2 {  }
+
+.hill-back {
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+    background:linear-gradient(to bottom, #85BB73,#467c32,#285518);
+    height: 80vh;
+    width: 110%; 
+    border-radius: 200% 0% 0% 0% / 170% 0% 0 0%; 
+}
+
+.hill-front {
+    background:linear-gradient(to bottom, #75c15c,#2f661c);
+    right: -4%;
+    height: 87vh;
+    width: 170%;
+    border-radius: 0% 100% 0 0 / 90% 100% 0 0;
+}
+
 
 /* Interface */
 
@@ -30,26 +74,26 @@ body {
 }
 
 .png-icons img {
-    width: 75px;
+    width: 80px;
     height: auto;
 }
 
 #theme-button {
     top: 25px;
-    left: 30px;
+    left: 70px;
 }
 
 #sound-button {
     top: 25px;
-    left: 125px;
+    left: 160px;
 }
 
 /* Main Desktop */
 
 .home-window {
-    width: 800px;
-    height: 439px;
-    margin: 100px 0px 0px 45px; 
+    width: 850px;
+    height: 490px;
+    margin: 100px 0px 0px 85px; 
     border: solid 4px #46506c;
     box-shadow: 8px 8px 0px rgba(33, 54, 112, 0.15); 
 }
@@ -65,23 +109,29 @@ body {
 
 .window-box {
     background-color: rgb(255, 255, 255);
-    padding: 60px 0px 33px 50px;
+    padding: 60px 0px 32px 50px;
     display: flex;
     flex-direction: column;
 }
 
 .window-box h1 {
     margin-top: 0;
+    padding-left: 15px;
     color: #2D3650;
     font-family: "Roboto Mono", monospace;
-    font-size: 45px;
+    font-size: 55px;
 }
 
 .window-box p {
     margin-top: 0;
+    padding-left: 15px;
     color: #2D3650;
     font-family: "Roboto Mono", monospace;
     font-size: 20px;
+}
+
+.nome-amarelo {
+    color:#5a83ff;
 }
 
 .main-icon-button {
@@ -106,7 +156,7 @@ body {
 }
 
 .main-icon-button img {
-    width: 100px;
+    width: 125px;
     height: auto;
     margin-bottom: 5px;
 }
@@ -115,6 +165,7 @@ body {
     margin-top: 0%;
     color: #2D3650;
     font-family: "Geist Pixel", sans-serif;
+    font-size: 17px;
 }
 
 /* Hidden for now */
