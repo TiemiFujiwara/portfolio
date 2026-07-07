@@ -65,7 +65,7 @@ body {
     padding: 10px;
 }
 
-.png-icons {
+.interface-icons {
     position:absolute;
     background: none;
     border: none;
@@ -73,19 +73,19 @@ body {
     cursor: pointer;
 }
 
-.png-icons img {
+.interface-icons img {
     width: 80px;
     height: auto;
 }
 
-#theme-button {
+.theme-button {
     top: 25px;
-    left: 70px;
+    left: 75px;
 }
 
-#sound-button {
+.sound-button {
     top: 25px;
-    left: 160px;
+    left: 164px;
 }
 
 /* Main Desktop */
@@ -167,6 +167,10 @@ body {
     font-family: "Geist Pixel", sans-serif;
     font-size: 17px;
 }
+
+/* About me */
+
+
 
 /* Hidden for now */
 
