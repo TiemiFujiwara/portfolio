@@ -66,8 +66,7 @@ body {
     position:absolute;
     background: none;
     border: none;
-    padding: none;
-    cursor: pointer;
+    padding: none; 
     transition: transform 0.3s ease;
 }
 
@@ -95,12 +94,17 @@ body {
 .home-window {
     width: 850px;
     height: 490px;
+    top: 100px;
+    left: 85px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
     margin: 100px 0px 0px 85px; 
     border: solid 4px #46506c;
     box-shadow: 8px 8px 0px rgba(33, 54, 112, 0.15); 
 }
 
-.window-bar {
+.main-window-bar {
     background-color: #1f2538;
     color: white;
     border-bottom: solid 4px #46506c;
@@ -109,14 +113,14 @@ body {
     font-size: 20px; 
 }
 
-.window-box {
+.main-window-box {
     background-color: rgb(255, 255, 255);
     padding: 60px 0px 32px 50px;
     display: flex;
     flex-direction: column;
 }
 
-.window-box h1 {
+.main-window-box h1 {
     margin-top: 0;
     padding-left: 15px;
     color: #2D3650;
@@ -124,7 +128,7 @@ body {
     font-size: 55px;
 }
 
-.window-box p {
+.main-window-box p {
     margin-top: 0;
     padding-left: 15px;
     color: #2D3650;
@@ -132,7 +136,7 @@ body {
     font-size: 20px;
 }
 
-.nome-amarelo {
+.nome-azul {
     color:#5a83ff;
 }
 
@@ -177,7 +181,87 @@ body {
 
 /* About me */
 
+.about-window {
+    width: 820px;
+    height: 495px;
+    top: 100px;
+    left: 85px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin: 100px 0px 0px 85px; 
+    border: solid 4px #46506c;
+    z-index: 10;
+}
 
+.about-window-bar {
+    background-color: #1f2538;
+    color: white;
+    display: flex;
+    flex-shrink: 0;
+    border-bottom: solid 4px #46506c;
+    padding: 7px 12px;
+    font-family: "Geist Pixel", sans-serif;
+    font-size: 20px; 
+}
+
+.about-window-box {
+    background-color: rgb(255, 255, 255);
+    padding: 60px 50px 32px 50px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.about-window-box h2 {
+    margin-top: 0;
+    padding-left: 15px;
+    color: #2D3650;
+    font-family: "Roboto Mono", monospace;
+    font-size: 55px;
+}
+
+.about-window-box p {
+    margin-top: 0;
+    padding-left: 15px;
+    color: #2D3650;
+    font-family: "Roboto Mono", monospace;
+    font-size: 20px;
+}
+
+/* Close Button */
+
+.close-window-button {
+    color:white;
+    background: none;
+    margin-left: auto;
+    border: none;
+    padding: 0px 0px;
+    font-family: "Roboto Mono", monospace;
+    font-size:20px;
+    transition: transform 0.3s ease;
+}
+
+.close-window-button:hover {
+    transform: scale(1.2);
+}
+
+/* Close Button */
+
+.close-window-button {
+    color:white;
+    background: none;
+    margin-left: auto;
+    border: none;
+    padding: 0px 0px;
+    font-family: "Roboto Mono", monospace;
+    font-size:20px;
+    transition: transform 0.3s ease;
+}
+
+.close-window-button:hover {
+    transform: scale(1.2);
+}
 
 /* Hidden for now */
 
