@@ -115,7 +115,7 @@ body {
 
 .main-window-box {
     background-color: rgb(255, 255, 255);
-    padding: 60px 0px 32px 50px;
+    padding: 60px 0px 60px 50px;
     display: flex;
     flex-direction: column;
 }
@@ -306,7 +306,7 @@ body {
 }
 
 .caption-style {
-    align: center;
+    text-align: center;
     color: #2D3650;
     font-family: "Roboto Mono", monospace;
     font-weight:480;
@@ -337,12 +337,51 @@ body {
 }
 
 .portfolio-window-text {
-    align: center;
+    text-align: center;
     color: #2D3650;
     font-family: "Nunito", sans-serif;
     font-size: 20px;
 }
 
+
+/* Contact Window */
+
+.contact-window {
+    width: 690px;
+    height: 600px;
+    top: -20px;
+    left: 220px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin: 100px 0px 0px 85px; 
+    border: solid 4px #46506c;
+}
+
+.contact-window-bar {
+    background-color: #1f2538;
+    color: white;
+    display: flex;
+    flex-shrink: 0;
+    border-bottom: solid 4px #46506c;
+    padding: 7px 12px;
+    font-family: "Geist Pixel", sans-serif;
+    font-size: 20px; 
+}
+
+.contact-window-box {
+    background-color: rgb(255, 255, 255);
+    padding: 60px 50px 445px 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-window-box h2 {
+    color: #2D3650;
+    font-family: "Roboto Mono", monospace;
+    font-size: 30px;
+    text-align: center;
+}
 
 /* Close Button */
 
