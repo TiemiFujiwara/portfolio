@@ -348,9 +348,9 @@ body {
 
 .contact-window {
     width: 690px;
-    height: 600px;
-    top: -20px;
-    left: 220px;
+    height: 620px;
+    top: -50px;
+    left: 320px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -374,6 +374,7 @@ body {
     padding: 60px 50px 445px 50px;
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
 }
 
 .contact-window-box h2 {
@@ -381,6 +382,15 @@ body {
     font-family: "Roboto Mono", monospace;
     font-size: 30px;
     text-align: center;
+    padding-bottom: 15px;
+}
+
+.contact-window-box p {
+    color: #2D3650;
+    font-family: "Roboto Mono", monospace;
+    font-size: medium;
+    text-align: center;
+    padding-bottom: 15px;
 }
 
 /* Close Button */
