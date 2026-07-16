@@ -2,6 +2,20 @@
     box-sizing: border-box;
 }
 
+/* Light mode and Dark mode */
+
+:root {
+    --lightmodebackground: linear-gradient(to bottom, #4b99ff,#ffc96c,#fff490);
+    --lightmodehillback: linear-gradient(to bottom, #85BB73,#467c32,#285518);
+    --lightmodehillfront: linear-gradient(to bottom, #75c15c,#2f661c);
+    --lightmodeboxborder: #46506c; 
+    --lightmodeboxbar: #1f2538;
+    --lightmodeboxwindow: rgb(255, 255, 255);
+    --lightmodefonts: #2D3650;
+    --lightmodename: #5a83ff;
+    --lightmodelinksborder: #b7c0d8;
+}
+
 /* Background */
 
 body {
@@ -10,7 +24,7 @@ body {
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    background:linear-gradient(to bottom, #4b99ff,#ffc96c,#fff490);
+    background: var(--lightmodebackground);
     min-height: 100vh;
 }
 
@@ -39,14 +53,14 @@ body {
     position: absolute;
     bottom: 0;
     left: 30%;
-    background:linear-gradient(to bottom, #85BB73,#467c32,#285518);
+    background: var(--lightmodehillback);
     height: 80vh;
     width: 110%; 
     border-radius: 200% 0% 0% 0% / 170% 0% 0 0%; 
 }
 
 .hill-front {
-    background:linear-gradient(to bottom, #75c15c,#2f661c);
+    background:var(--lightmodehillfront);
     right: -4%;
     height: 87vh;
     width: 170%;
@@ -100,21 +114,20 @@ body {
     flex-direction: column;
     overflow: hidden;
     margin: 100px 0px 0px 85px; 
-    border: solid 4px #46506c;
-    box-shadow: 8px 8px 0px rgba(33, 54, 112, 0.15);
+    border: solid 4px var(--lightmodeboxborder);
 }
 
 .main-window-bar {
-    background-color: #1f2538;
+    background-color: var(--lightmodeboxbar);
     color: white;
-    border-bottom: solid 4px #46506c;
+    border-bottom: solid 4px var(--lightmodeboxborder);
     padding: 7px 12px;
     font-family: "Geist Pixel", sans-serif;
     font-size: 20px; 
 }
 
 .main-window-box {
-    background-color: rgb(255, 255, 255);
+    background-color: var(--lightmodeboxwindow);
     padding: 60px 0px 60px 50px;
     display: flex;
     flex-direction: column;
@@ -123,7 +136,7 @@ body {
 .main-window-box h1 {
     margin-top: 0;
     padding-left: 15px;
-    color: #2D3650;
+    color: var(--lightmodefonts);
     font-family: "Roboto Mono", monospace;
     font-size: 55px;
 }
@@ -131,13 +144,13 @@ body {
 .main-window-box p {
     margin-top: 0;
     padding-left: 15px;
-    color: #2D3650;
+    color: var(--lightmodefonts);
     font-family: "Roboto Mono", monospace;
     font-size: 20px;
 }
 
 .nome-azul {
-    color:#5a83ff;
+    color: var(--lightmodename);
 }
 
 .main-icon-button {
@@ -174,7 +187,7 @@ body {
 
 .name-icon {
     margin-top: 0%;
-    color: #2D3650;
+    color: var(--lightmodefonts);
     font-family: "Geist Pixel", sans-serif;
     font-size: 17px;
 }
@@ -190,22 +203,22 @@ body {
     flex-direction: column;
     overflow: hidden;
     margin: 100px 0px 0px 85px; 
-    border: solid 4px #46506c;
+    border: solid 4px var(--lightmodeboxborder);
 }
 
 .about-window-bar {
-    background-color: #1f2538;
+    background-color: var(--lightmodeboxbar);
     color: white;
     display: flex;
     flex-shrink: 0;
-    border-bottom: solid 4px #46506c;
+    border-bottom: solid 4px var(--lightmodeboxborder);
     padding: 7px 12px;
     font-family: "Geist Pixel", sans-serif;
     font-size: 20px; 
 }
 
 .about-window-box {
-    background-color: rgb(255, 255, 255);
+    background-color: var(--lightmodeboxwindow);
     padding: 60px 50px 32px 50px;
     display: flex;
     flex-direction: column;
@@ -215,7 +228,7 @@ body {
 .about-window-box h2 {
     margin-top: 0;
     padding-left: 15px;
-    color: #2D3650;
+    color: var(--lightmodefonts);
     font-family: "Roboto Mono", monospace;
     font-size: 55px;
 }
@@ -223,7 +236,7 @@ body {
 .about-window-box p {
     margin-top: 0;
     padding-left: 15px;
-    color: #2D3650;
+    color: var(--lightmodefonts);
     font-family: "Roboto Mono", monospace;
     font-size: 20px;
 }
@@ -240,22 +253,22 @@ body {
     flex-direction: column;
     overflow: hidden;
     margin: 100px 0px 0px 85px; 
-    border: solid 4px #46506c;
+    border: solid 4px var(--lightmodeboxborder);
 }
 
 .links-window-bar {
-    background-color: #1f2538;
+    background-color: var(--lightmodeboxbar);
     color: white;
     display: flex;
     flex-shrink: 0;
-    border-bottom: solid 4px #46506c;
+    border-bottom: solid 4px var(--lightmodeboxborder);
     padding: 7px 12px;
     font-family: "Geist Pixel", sans-serif;
     font-size: 20px; 
 }
 
 .links-window-box {
-    background-color: rgb(255, 255, 255);
+    background-color: var(--lightmodeboxwindow);
     padding: 60px 50px 198px 50px;
     display: flex;
     flex-direction: column;
@@ -263,10 +276,10 @@ body {
 
 .links-window-box p {
     margin-top: 0;
-    border: solid 3px #b7c0d8;
+    border: solid 3px var(--lightmodelinksborder);
     border-radius: 8px;
     padding: 20px;
-    color: #2D3650;
+    color: var(--lightmodefonts);
     font-family: "Nunito", sans-serif;
     font-size: 17px;
     text-align: center;
@@ -283,11 +296,11 @@ body {
     flex-direction: column;
     overflow: hidden;
     margin: 100px 0px 0px 85px; 
-    border: solid 4px #46506c;
+    border: solid 4px var(--lightmodeboxborder);
 }
 
 .portfolio-window-bar {
-    background-color: #1f2538;
+    background-color: var(--lightmodeboxbar);
     color: white;
     display: flex;
     flex-shrink: 0;
@@ -298,7 +311,7 @@ body {
 }
 
 .portfolio-window-box {
-    background-color: rgb(255, 255, 255);
+    background-color: var(--lightmodeboxwindow);
     padding: 60px 50px 198px 50px;
     display: flex;
     flex-direction: column;
@@ -307,7 +320,7 @@ body {
 
 .caption-style {
     text-align: center;
-    color: #2D3650;
+    color: var(--lightmodefonts);
     font-family: "Roboto Mono", monospace;
     font-weight:480;
     font-size: 25px;
@@ -323,10 +336,10 @@ body {
 }
 
 .portfolio-work {
-    border: solid 3px #b7c0d8;
+    border: solid 3px var(--lightmodelinksborder);
     border-radius: 8px;
     padding: 8px;
-    color: #2D3650;
+    color: var(--lightmodefonts);
     font-family: "Nunito", sans-serif;
     font-size: 15px;
     transition: transform 0.3s ease;
@@ -338,7 +351,7 @@ body {
 
 .portfolio-window-text {
     text-align: center;
-    color: #2D3650;
+    color: var(--lightmodefonts);
     font-family: "Nunito", sans-serif;
     font-size: 20px;
 }
@@ -355,22 +368,22 @@ body {
     flex-direction: column;
     overflow: hidden;
     margin: 100px 0px 0px 85px; 
-    border: solid 4px #46506c;
+    border: solid 4px var(--lightmodeboxborder);
 }
 
 .contact-window-bar {
-    background-color: #1f2538;
+    background-color: var(--lightmodeboxbar);
     color: white;
     display: flex;
     flex-shrink: 0;
-    border-bottom: solid 4px #46506c;
+    border-bottom: solid 4px var(--lightmodeboxborder);
     padding: 7px 12px;
     font-family: "Geist Pixel", sans-serif;
     font-size: 20px; 
 }
 
 .contact-window-box {
-    background-color: rgb(255, 255, 255);
+    background-color: var(--lightmodeboxwindow);
     padding: 60px 50px 445px 50px;
     display: flex;
     flex-direction: column;
@@ -378,7 +391,7 @@ body {
 }
 
 .contact-window-box h2 {
-    color: #2D3650;
+    color: var(--lightmodefonts);
     font-family: "Roboto Mono", monospace;
     font-size: 30px;
     text-align: center;
@@ -386,7 +399,7 @@ body {
 }
 
 .contact-window-box p {
-    color: #2D3650;
+    color: var(--lightmodefonts);
     font-family: "Roboto Mono", monospace;
     font-size: medium;
     text-align: center;
