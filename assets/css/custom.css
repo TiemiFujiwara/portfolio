@@ -5,17 +5,27 @@
 /* Light mode and Dark mode */
 
 :root {
-    --lightmodebackground: linear-gradient(to bottom, #4b99ff,#ffc96c,#fff490);
-    --lightmodehillback: linear-gradient(to bottom, #85BB73,#467c32,#285518);
-    --lightmodehillfront: linear-gradient(to bottom, #75c15c,#2f661c);
-    --lightmodeboxborder: #46506c; 
-    --lightmodeboxbar: #1f2538;
-    --lightmodeboxwindow: rgb(255, 255, 255);
-    --lightmodefonts: #2D3650;
-    --lightmodename: #5a83ff;
-    --lightmodelinksborder: #b7c0d8;
+    --desktopbackground: linear-gradient(to bottom, #4b99ff,#ffc96c,#fff490);
+    --hillback: linear-gradient(to bottom, #85BB73,#467c32,#285518);
+    --hillfront: linear-gradient(to bottom, #75c15c,#2f661c);
+    --boxborder: #46506c; 
+    --boxbar: #1f2538;
+    --boxwindow: rgb(255, 255, 255);
+    --fonts: #2D3650;
+    --name: #5a83ff;
+    --linksborder: #b7c0d8;
+}
 
-    
+html.dark {
+    --desktopbackground: linear-gradient(to bottom, #312735,#AD7062,#FBB248,#ffe415);
+    --hillback: linear-gradient(to bottom, #423D4F,#110f1b);
+    --hillfront: linear-gradient(to bottom, #423D4F,#1a1825);
+    --boxborder: #FFF8C6; 
+    --boxbar: #0F061A;
+    --boxwindow: #1C162E;
+    --fonts: #FFF8C6;
+    --name: #FFC34C;
+    --linksborder: #FECB64;
 }
 
 /* Background */
@@ -26,7 +36,7 @@ body {
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    background: var(--lightmodebackground);
+    background: var(--desktopbackground);
     min-height: 100vh;
 }
 
@@ -55,14 +65,14 @@ body {
     position: absolute;
     bottom: 0;
     left: 30%;
-    background: var(--lightmodehillback);
+    background: var(--hillback);
     height: 80vh;
     width: 110%; 
     border-radius: 200% 0% 0% 0% / 170% 0% 0 0%; 
 }
 
 .hill-front {
-    background:var(--lightmodehillfront);
+    background:var(--hillfront);
     right: -4%;
     height: 87vh;
     width: 170%;
@@ -116,20 +126,20 @@ body {
     flex-direction: column;
     overflow: hidden;
     margin: 100px 0px 0px 85px; 
-    border: solid 4px var(--lightmodeboxborder);
+    border: solid 4px var(--boxborder);
 }
 
 .main-window-bar {
-    background-color: var(--lightmodeboxbar);
+    background-color: var(--boxbar);
     color: white;
-    border-bottom: solid 4px var(--lightmodeboxborder);
+    border-bottom: solid 4px var(--boxborder);
     padding: 7px 12px;
     font-family: "Geist Pixel", sans-serif;
     font-size: 20px; 
 }
 
 .main-window-box {
-    background-color: var(--lightmodeboxwindow);
+    background-color: var(--boxwindow);
     padding: 60px 0px 60px 50px;
     display: flex;
     flex-direction: column;
@@ -138,7 +148,7 @@ body {
 .main-window-box h1 {
     margin-top: 0;
     padding-left: 15px;
-    color: var(--lightmodefonts);
+    color: var(--fonts);
     font-family: "Roboto Mono", monospace;
     font-size: 55px;
 }
@@ -146,13 +156,13 @@ body {
 .main-window-box p {
     margin-top: 0;
     padding-left: 15px;
-    color: var(--lightmodefonts);
+    color: var(--fonts);
     font-family: "Roboto Mono", monospace;
     font-size: 20px;
 }
 
 .nome-azul {
-    color: var(--lightmodename);
+    color: var(--name);
 }
 
 .main-icon-button {
@@ -189,7 +199,7 @@ body {
 
 .name-icon {
     margin-top: 0%;
-    color: var(--lightmodefonts);
+    color: var(--fonts);
     font-family: "Geist Pixel", sans-serif;
     font-size: 17px;
 }
@@ -205,22 +215,22 @@ body {
     flex-direction: column;
     overflow: hidden;
     margin: 100px 0px 0px 85px; 
-    border: solid 4px var(--lightmodeboxborder);
+    border: solid 4px var(--boxborder);
 }
 
 .about-window-bar {
-    background-color: var(--lightmodeboxbar);
+    background-color: var(--boxbar);
     color: white;
     display: flex;
     flex-shrink: 0;
-    border-bottom: solid 4px var(--lightmodeboxborder);
+    border-bottom: solid 4px var(--boxborder);
     padding: 7px 12px;
     font-family: "Geist Pixel", sans-serif;
     font-size: 20px; 
 }
 
 .about-window-box {
-    background-color: var(--lightmodeboxwindow);
+    background-color: var(--boxwindow);
     padding: 60px 50px 32px 50px;
     display: flex;
     flex-direction: column;
@@ -230,7 +240,7 @@ body {
 .about-window-box h2 {
     margin-top: 0;
     padding-left: 15px;
-    color: var(--lightmodefonts);
+    color: var(--fonts);
     font-family: "Roboto Mono", monospace;
     font-size: 55px;
 }
@@ -238,7 +248,7 @@ body {
 .about-window-box p {
     margin-top: 0;
     padding-left: 15px;
-    color: var(--lightmodefonts);
+    color: var(--fonts);
     font-family: "Roboto Mono", monospace;
     font-size: 20px;
 }
@@ -255,22 +265,22 @@ body {
     flex-direction: column;
     overflow: hidden;
     margin: 100px 0px 0px 85px; 
-    border: solid 4px var(--lightmodeboxborder);
+    border: solid 4px var(--boxborder);
 }
 
 .links-window-bar {
-    background-color: var(--lightmodeboxbar);
+    background-color: var(--boxbar);
     color: white;
     display: flex;
     flex-shrink: 0;
-    border-bottom: solid 4px var(--lightmodeboxborder);
+    border-bottom: solid 4px var(--boxborder);
     padding: 7px 12px;
     font-family: "Geist Pixel", sans-serif;
     font-size: 20px; 
 }
 
 .links-window-box {
-    background-color: var(--lightmodeboxwindow);
+    background-color: var(--boxwindow);
     padding: 60px 50px 198px 50px;
     display: flex;
     flex-direction: column;
@@ -278,10 +288,10 @@ body {
 
 .links-window-box p {
     margin-top: 0;
-    border: solid 3px var(--lightmodelinksborder);
+    border: solid 3px var(--linksborder);
     border-radius: 8px;
     padding: 20px;
-    color: var(--lightmodefonts);
+    color: var(--fonts);
     font-family: "Nunito", sans-serif;
     font-size: 17px;
     text-align: center;
@@ -298,11 +308,11 @@ body {
     flex-direction: column;
     overflow: hidden;
     margin: 100px 0px 0px 85px; 
-    border: solid 4px var(--lightmodeboxborder);
+    border: solid 4px var(--boxborder);
 }
 
 .portfolio-window-bar {
-    background-color: var(--lightmodeboxbar);
+    background-color: var(--boxbar);
     color: white;
     display: flex;
     flex-shrink: 0;
@@ -313,7 +323,7 @@ body {
 }
 
 .portfolio-window-box {
-    background-color: var(--lightmodeboxwindow);
+    background-color: var(--boxwindow);
     padding: 60px 50px 198px 50px;
     display: flex;
     flex-direction: column;
@@ -322,7 +332,7 @@ body {
 
 .caption-style {
     text-align: center;
-    color: var(--lightmodefonts);
+    color: var(--fonts);
     font-family: "Roboto Mono", monospace;
     font-weight:480;
     font-size: 25px;
@@ -338,10 +348,10 @@ body {
 }
 
 .portfolio-work {
-    border: solid 3px var(--lightmodelinksborder);
+    border: solid 3px var(--linksborder);
     border-radius: 8px;
     padding: 8px;
-    color: var(--lightmodefonts);
+    color: var(--fonts);
     font-family: "Nunito", sans-serif;
     font-size: 15px;
     transition: transform 0.3s ease;
@@ -353,7 +363,7 @@ body {
 
 .portfolio-window-text {
     text-align: center;
-    color: var(--lightmodefonts);
+    color: var(--fonts);
     font-family: "Nunito", sans-serif;
     font-size: 20px;
 }
@@ -370,22 +380,22 @@ body {
     flex-direction: column;
     overflow: hidden;
     margin: 100px 0px 0px 85px; 
-    border: solid 4px var(--lightmodeboxborder);
+    border: solid 4px var(--boxborder);
 }
 
 .contact-window-bar {
-    background-color: var(--lightmodeboxbar);
+    background-color: var(--boxbar);
     color: white;
     display: flex;
     flex-shrink: 0;
-    border-bottom: solid 4px var(--lightmodeboxborder);
+    border-bottom: solid 4px var(--boxborder);
     padding: 7px 12px;
     font-family: "Geist Pixel", sans-serif;
     font-size: 20px; 
 }
 
 .contact-window-box {
-    background-color: var(--lightmodeboxwindow);
+    background-color: var(--boxwindow);
     padding: 60px 50px 445px 50px;
     display: flex;
     flex-direction: column;
@@ -393,7 +403,7 @@ body {
 }
 
 .contact-window-box h2 {
-    color: var(--lightmodefonts);
+    color: var(--fonts);
     font-family: "Roboto Mono", monospace;
     font-size: 30px;
     text-align: center;
@@ -401,7 +411,7 @@ body {
 }
 
 .contact-window-box p {
-    color: var(--lightmodefonts);
+    color: var(--fonts);
     font-family: "Roboto Mono", monospace;
     font-size: medium;
     text-align: center;
