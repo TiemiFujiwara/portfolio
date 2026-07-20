@@ -47,3 +47,32 @@ function alternarTema() {
 }
 
 themeButton.addEventListener('click', alternarTema);
+
+// 2. Open Pop-up Windows
+
+const buttonsMenu = document.querySelectorAll('.main-icon-button');
+const windowsList = [
+    document.querySelector('.about-window'), document.querySelector('.links-window'), document.querySelector('.portfolio-window'), document.querySelector('.contact-window')
+];
+
+buttonsMenu.forEach((button, index) => {
+    button.addEventListener('click', () => {
+        const windowTarget = windowsList[index];
+        if (windowTarget) {
+            windowTarget.classList.remove('hidden');
+        }
+    });
+});
+
+// 3. Close Pop-up Windows
+
+const closeButtons = document.querySelectorAll('.close-window-button');
+
+closeButtons.forEach(button => {
+    button.addEventListener('click', (event) => {
+        const windowForClosing = event.target.closest('.about-window, .links-window, .portfolio-window, .contact-window');
+        if (windowForClosing) {
+            windowForClosing.classList.add('hidden');
+        }
+    });
+});
