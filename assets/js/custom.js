@@ -60,11 +60,21 @@ buttonsMenu.forEach((button, index) => {
         const windowTarget = windowsList[index];
         if (windowTarget) {
             windowTarget.classList.remove('hidden');
+            bringingWindowFront(windowTarget);
         }
     });
 });
 
-// 3. Close Pop-up Windows
+//3. Window Priority Feature
+
+let maxIndex = 10;
+
+function bringingWindowFront(windowElement) {
+    maxIndex++;
+    windowElement.style.zIndex = maxIndex;
+}
+
+// 4. Close Pop-up Windows
 
 const closeButtons = document.querySelectorAll('.close-window-button');
 
@@ -77,7 +87,7 @@ closeButtons.forEach(button => {
     });
 });
 
-// 4. Make the Windows Draggable
+// 5. Make the Windows Draggable
 
 const barsWindow = document.querySelectorAll('.about-window-bar, .links-window-bar, .portfolio-window-bar, .contact-window-bar');
 barsWindow.forEach(bars => {
