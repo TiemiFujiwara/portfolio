@@ -15,7 +15,7 @@ const allIconsDark = document.querySelectorAll('.dark-home-icon');
 
 const formContact = document.getElementById('contact-form');
 
-function alternarTema() {
+function changeTheme() {
     htmlElement.classList.toggle('dark');
     if (htmlElement.classList.contains('dark')) {
         lightIcon.classList.add('hidden');
@@ -46,7 +46,7 @@ function alternarTema() {
     }
 }
 
-themeButton.addEventListener('click', alternarTema);
+themeButton.addEventListener('click', changeTheme);
 
 // 2. Open Pop-up Windows
 
@@ -73,6 +73,11 @@ function bringingWindowFront(windowElement) {
     maxIndex++;
     windowElement.style.zIndex = maxIndex;
 }
+
+const windowsAll = document.querySelectorAll('.about-window, .links-window, .portfolio-window, .contact-window');
+windowsAll.forEach(get => {
+    get.addEventListener('mousedown', () => bringingWindowFront(get));
+});
 
 // 4. Close Pop-up Windows
 
