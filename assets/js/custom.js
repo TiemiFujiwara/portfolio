@@ -76,3 +76,31 @@ closeButtons.forEach(button => {
         }
     });
 });
+
+// 4. Make the Windows Draggable
+
+const barsWindow = document.querySelectorAll('.about-window-bar, .links-window-bar, .portfolio-window-bar, .contact-window-bar');
+barsWindow.forEach(bars => {
+    bars.addEventListener('mousedown', startMoving);
+});
+
+function startMoving(event) {
+    if (event.target.classList.contains('close-window-button')) return;
+    const windowElement = event.currentTarget.parentElement;
+
+    function moving(event) {
+        let positionX = windowElement.offsetLeft;
+        let positionY = windowElement.offsetTop;
+        windowElement.style.left = (positionX + event.movementX) + 'px';
+        windowElement.style.top = (positionY + event.movementY) + 'px';
+        windowElement.style.margin = '0px';
+    }
+
+    function lettingGo() {
+        document.removeEventListener('mousemove', moving);
+        document.removeEventListener('mouseup', lettingGo);
+    }
+
+    document.addEventListener('mousemove', moving);
+    document.addEventListener('mouseup', lettingGo);
+}
