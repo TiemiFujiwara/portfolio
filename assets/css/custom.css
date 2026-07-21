@@ -262,6 +262,7 @@ body {
 .links-window {
     width: 600px;
     height: 450px;
+    position: absolute;
     top: 50px;
     left: 95px;
     display: flex;
@@ -305,6 +306,7 @@ body {
 .portfolio-window {
     width: 890px;
     height: 590px;
+    position: absolute;
     top: -30px;
     left: 195px;
     display: flex;
@@ -377,6 +379,7 @@ body {
 .contact-window {
     width: 690px;
     height: 620px;
+    position: absolute;
     top: -50px;
     left: 320px;
     display: flex;
