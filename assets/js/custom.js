@@ -13,6 +13,9 @@ const soundOffDark = document.querySelector('.dark-sound-off');
 const allIconsLight = document.querySelectorAll('.light-home-icon');
 const allIconsDark = document.querySelectorAll('.dark-home-icon');
 
+const cloudsLight = document.querySelector('.light-clouds-group');
+const cloudsDark = document.querySelector('.dark-clouds-group');
+
 const formContact = document.getElementById('contact-form');
 
 function changeTheme() {
@@ -29,6 +32,9 @@ function changeTheme() {
         allIconsLight.forEach(icon => icon.classList.add('hidden'));
         allIconsDark.forEach(icon => icon.classList.remove('hidden'));
         
+        cloudsLight.classList.add('hidden');
+        cloudsDark.classList.remove('hidden');
+
         formContact.setAttribute('data-bs-theme','dark');
     } else {
         lightIcon.classList.remove('hidden');
@@ -42,6 +48,9 @@ function changeTheme() {
         allIconsLight.forEach(icon => icon.classList.remove('hidden'));
         allIconsDark.forEach(icon => icon.classList.add('hidden'));
     
+        cloudsLight.classList.remove('hidden');
+        cloudsDark.classList.add('hidden');
+
         formContact.setAttribute('data-bs-theme','');
     }
 }
