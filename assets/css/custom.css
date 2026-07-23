@@ -120,6 +120,35 @@ body {
     left: 70%;
 }
 
+.dark-clouds-group img{
+    position: absolute;
+    height: auto;
+}
+
+.darkcloud1 {
+    width: 35%;
+    top: -13%;
+    left: 1%;
+}
+
+.darkcloud2 {
+    width: 30%;
+    top: -10%;
+    left: 20%;
+}
+
+.darkcloud3 {
+    width: 30%;
+    top: -10%;
+    left: 42%;
+}
+
+.darkcloud4 {
+    width: 37%;
+    top: -13%;
+    left: 65%;
+}
+
 .hill-back {
     position: absolute;
     bottom: 0;
