@@ -149,6 +149,16 @@ body {
     left: 65%;
 }
 
+.dark-stars {
+    position: fixed;
+    top: -5%;
+    left: 0;
+    width: 90%;
+    height: auto;
+    z-index: -3;
+    pointer-events: none;
+}
+
 .hill-back {
     position: absolute;
     bottom: 0;

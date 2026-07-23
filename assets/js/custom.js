@@ -15,6 +15,7 @@ const allIconsDark = document.querySelectorAll('.dark-home-icon');
 
 const cloudsLight = document.querySelector('.light-clouds-group');
 const cloudsDark = document.querySelector('.dark-clouds-group');
+const starsDark = document.querySelector('.dark-stars');
 
 const formContact = document.getElementById('contact-form');
 
@@ -34,6 +35,7 @@ function changeTheme() {
         
         cloudsLight.classList.add('hidden');
         cloudsDark.classList.remove('hidden');
+        starsDark.classList.remove('hidden');
 
         formContact.setAttribute('data-bs-theme','dark');
     } else {
@@ -50,6 +52,7 @@ function changeTheme() {
     
         cloudsLight.classList.remove('hidden');
         cloudsDark.classList.add('hidden');
+        starsDark.classList.add('hidden');
 
         formContact.setAttribute('data-bs-theme','');
     }
