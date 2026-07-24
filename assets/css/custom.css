@@ -462,14 +462,18 @@ body {
 
 .portfolio-window-box {
     background-color: var(--boxwindow);
-    padding: 60px 50px 198px 50px;
+    padding: 60px 50px 250px 50px;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
 }
 
+.portfolio-window-box h3 {
+    padding-bottom: 10px;
+}
+
 .caption-style {
-    text-align: center;
+    text-align: left;
     color: var(--fonts);
     font-family: "Roboto Mono", monospace;
     font-weight:480;
