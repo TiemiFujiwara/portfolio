@@ -12,7 +12,8 @@
 10. Contact
 11. Close Button
 12. Changing Windows
-13. Hidden for now
+13. Preloader
+14. Hidden for now
 */
 
 * {
@@ -618,7 +619,36 @@ body {
     z-index: 10 !important;
 }
 
-/* 13. Hidden for now */
+/* 13. Preloader */
+
+#preloader {
+    position: fixed;
+    background-color: #fafafa;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.loader-icon {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 40%;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    background-image: url('../img/preloader.gif');
+    z-index: 120;
+}
+
+#preloader.preloaderHide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* 14. Hidden for now */
 
 .hidden {
     display: none;

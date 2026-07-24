@@ -137,3 +137,11 @@ function startMoving(event) {
     document.addEventListener('mousemove', moving);
     document.addEventListener('mouseup', lettingGo);
 }
+
+
+// 6. Preloader Function
+
+window.addEventListener('load' , function() {
+    const preloader = document.getElementById('preloader');
+    preloader.classList.add('hidden');
+});
