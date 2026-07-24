@@ -91,72 +91,9 @@ body {
     height: auto;
 }
 
-.lightcloud1 {
-    width: 40%;
-    top: -19%;
-    left: 1%;
-}
-
-.lightcloud2 {
-    width: 28%;
-    top: -10%;
-    left: 28%;
-}
-
-.lightcloud3 {
-    width: 27%;
-    top: -15%;
-    left: 48%;
-}
-
-.lightcloud4 {
-    width: 30%;
-    top: -16%;
-    left: 52%;
-}
-.lightcloud5 {
-    width: 32%;
-    top: -9%;
-    left: 70%;
-}
-
 .dark-clouds-group img{
     position: absolute;
     height: auto;
-}
-
-.darkcloud1 {
-    width: 35%;
-    top: -13%;
-    left: 1%;
-}
-
-.darkcloud2 {
-    width: 30%;
-    top: -10%;
-    left: 20%;
-}
-
-.darkcloud3 {
-    width: 30%;
-    top: -10%;
-    left: 42%;
-}
-
-.darkcloud4 {
-    width: 37%;
-    top: -13%;
-    left: 65%;
-}
-
-.dark-stars {
-    position: fixed;
-    top: -5%;
-    left: 0;
-    width: 90%;
-    height: auto;
-    z-index: -3;
-    pointer-events: none;
 }
 
 .hill-back {
@@ -208,11 +145,103 @@ body {
 
 /* 3. Clouds Animation Light Mode */
 
+@keyframes cloudMovingLoopLeft {
+  0% {transform: translateX(-100vh);}
+  50% {transform: translateX(0);}
+  100% {transform: translateX(100vw);}
+}
 
+@keyframes cloudMovingLoopRight {
+  0% {transform: translateX(-230vh);}
+  50% {transform: translateX(0);}
+  100% {transform: translateX(90vw);}
+}
+
+.lightcloud1 {
+    width: 40%;
+    top: -19%;
+    left: 1%;
+    animation: cloudMovingLoopLeft 50s linear infinite;
+}
+
+.lightcloud2 {
+    width: 28%;
+    top: -10%;
+    left: 28%;
+    animation: cloudMovingLoopLeft 40s linear infinite;
+}
+
+.lightcloud3 {
+    width: 27%;
+    top: -15%;
+    left: 48%;
+    animation: cloudMovingLoopLeft 30s linear infinite;
+}
+
+.lightcloud4 {
+    width: 30%;
+    top: -16%;
+    left: 52%;
+    animation: cloudMovingLoopRight 50s linear infinite;
+}
+.lightcloud5 {
+    width: 32%;
+    top: -9%;
+    left: 70%;
+    animation: cloudMovingLoopRight 47s linear infinite;
+}
 
 /* 4. Cloud Animation Dark Mode */
 
+.darkcloud1 {
+    width: 35%;
+    top: -13%;
+    left: 1%;
+    animation: cloudMovingLoopLeft 50s linear infinite;
+}
 
+.darkcloud2 {
+    width: 30%;
+    top: -10%;
+    left: 20%;
+    animation: cloudMovingLoopLeft 40s linear infinite;
+}
+
+.darkcloud3 {
+    width: 30%;
+    top: -10%;
+    left: 42%;
+    animation: cloudMovingLoopRight 30s linear infinite;
+}
+
+.darkcloud4 {
+    width: 37%;
+    top: -13%;
+    left: 65%;
+    animation: cloudMovingLoopRight 50s linear infinite;
+}
+
+@keyframes starsShining {
+    0% , 100% {
+        opacity: 0.5;
+        filter: brightness(1);
+    }
+    50% {
+        opacity: 1;
+        filter: brightness(1.8);
+    }
+}
+
+.dark-stars {
+    position: fixed;
+    top: -5%;
+    left: 0;
+    width: 90%;
+    height: auto;
+    z-index: -3;
+    pointer-events: none;
+    animation: starsShining 4s ease-in-out infinite;
+}
 
 /* 5. Interface */
 
