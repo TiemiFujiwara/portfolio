@@ -643,11 +643,6 @@ body {
     z-index: 120;
 }
 
-#preloader.preloaderHide {
-    opacity: 0;
-    visibility: hidden;
-}
-
 /* 14. Hidden for now */
 
 .hidden {
