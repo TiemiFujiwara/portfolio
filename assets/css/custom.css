@@ -13,638 +13,667 @@
 11. Close Button
 12. Changing Windows
 13. Preloader
-14. Hidden for now
+14. Responsivo Viewport
+15. Hidden for now
 */
 
 * {
-    box-sizing: border-box;
-    transition: background-image 0.5s ease, background-color 0.5s ease;
+  box-sizing: border-box;
+  transition:
+    background-image 0.5s ease,
+    background-color 0.5s ease;
 }
 
 /* 1. Light mode and Dark mode */
 
 :root {
-    --desktopbackground: linear-gradient(to bottom, #4b99ff,#ffc96c,#fff490);
-    --hillback: linear-gradient(to bottom, #8ed577,#54943d,#285518);
-    --hillfront: linear-gradient(to bottom, #71b759,#3d762a);
-    --boxborder: #46506c; 
-    --boxbar: #1f2538;
-    --boxwindow: rgb(255, 255, 255);
-    --fonts: #2D3650;
-    --name: #5a83ff;
-    --linksborder: #b7c0d8;
+  --desktopbackground: linear-gradient(to bottom, #4b99ff, #ffc96c, #fff490);
+  --hillback: linear-gradient(to bottom, #8ed577, #54943d, #285518);
+  --hillfront: linear-gradient(to bottom, #71b759, #3d762a);
+  --boxborder: #46506c;
+  --boxbar: #1f2538;
+  --boxwindow: rgb(255, 255, 255);
+  --fonts: #2d3650;
+  --name: #5a83ff;
+  --linksborder: #b7c0d8;
 }
 
 html.dark {
-    --desktopbackground: linear-gradient(to bottom, #312735,#AD7062,#FBB248,#ffe415);
-    --hillback: linear-gradient(to bottom, #423D4F,#110f1b);
-    --hillfront: linear-gradient(to bottom, #423D4F,#1a1825);
-    --boxborder: #FFF8C6; 
-    --boxbar: #0F061A;
-    --boxwindow: #1C162E;
-    --fonts: #FFF8C6;
-    --name: #FFC34C;
-    --linksborder: #FECB64;
+  --desktopbackground: linear-gradient(
+    to bottom,
+    #312735,
+    #ad7062,
+    #fbb248,
+    #ffe415
+  );
+  --hillback: linear-gradient(to bottom, #423d4f, #110f1b);
+  --hillfront: linear-gradient(to bottom, #423d4f, #1a1825);
+  --boxborder: #fff8c6;
+  --boxbar: #0f061a;
+  --boxwindow: #1c162e;
+  --fonts: #fff8c6;
+  --name: #ffc34c;
+  --linksborder: #fecb64;
 }
 
 /* 2. Background */
 
 body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    background: var(--desktopbackground);
-    min-height: 100vh;
-    transition: background-image 0.5s ease, background-color 0.5s ease;
-    z-index: -3;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--desktopbackground);
+  min-height: 100vh;
+  transition:
+    background-image 0.5s ease,
+    background-color 0.5s ease;
+  z-index: -3;
 }
 
 .scenery-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
-    pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
 }
 
 .scenery-layer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
-.light-clouds-group, .dark-clouds-group {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -2;
-    pointer-events: none;
+.light-clouds-group,
+.dark-clouds-group {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  pointer-events: none;
 }
 
-.light-clouds-group img{
-    position: absolute;
-    height: auto;
+.light-clouds-group img {
+  position: absolute;
+  height: auto;
 }
 
-.dark-clouds-group img{
-    position: absolute;
-    height: auto;
+.dark-clouds-group img {
+  position: absolute;
+  height: auto;
 }
 
 .hill-back {
-    position: absolute;
-    bottom: 0;
-    left: 30%;
-    background: var(--hillback);
-    height: 80vh;
-    width: 110%; 
-    border-radius: 200% 0% 0% 0% / 170% 0% 0 0%; 
+  position: absolute;
+  bottom: 0;
+  left: 30%;
+  background: var(--hillback);
+  height: 80vh;
+  width: 110%;
+  border-radius: 200% 0% 0% 0% / 170% 0% 0 0%;
 }
 
 .hill-front {
-    background:var(--hillfront);
-    right: -4%;
-    height: 87vh;
-    width: 170%;
-    border-radius: 0% 100% 0 0 / 90% 100% 0 0;
+  background: var(--hillfront);
+  right: -4%;
+  height: 87vh;
+  width: 170%;
+  border-radius: 0% 100% 0 0 / 90% 100% 0 0;
 }
 
 /* Honestamente a parte mais complicada, tentei em gif e até spritesheet antes de usar extensões para converter*/
 
 .butterfly {
-    position: relative;
-    pointer-events: none;
+  position: relative;
+  pointer-events: none;
 }
 
 .light-butterfly {
-    position: absolute;
-    top: -1035px;
-    right: 2px;
-    width: 1540px;
-    height: auto;
-    z-index: 5;
-    pointer-events: none;
-    transition: 0.5s ease;
+  position: absolute;
+  top: -1035px;
+  right: 2px;
+  width: 1540px;
+  height: auto;
+  z-index: 5;
+  pointer-events: none;
+  transition: 0.5s ease;
 }
 
 .dark-butterfly {
-    position: absolute;
-    top: -1035px;
-    right: 2px;
-    width: 1540px;
-    height: auto;
-    z-index: 5;
-    pointer-events: none;
-    transition: 0.5s ease;
+  position: absolute;
+  top: -1035px;
+  right: 2px;
+  width: 1540px;
+  height: auto;
+  z-index: 5;
+  pointer-events: none;
+  transition: 0.5s ease;
 }
 
 /* 3. Clouds Animation Light Mode */
 
 @keyframes cloudMovingLoopLeft {
-  0% {transform: translateX(-100vh);}
-  50% {transform: translateX(0);}
-  100% {transform: translateX(100vw);}
+  0% {
+    transform: translateX(-100vh);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
 }
 
 @keyframes cloudMovingLoopRight {
-  0% {transform: translateX(-230vh);}
-  50% {transform: translateX(0);}
-  100% {transform: translateX(90vw);}
+  0% {
+    transform: translateX(-230vh);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(90vw);
+  }
 }
 
 .lightcloud1 {
-    width: 40%;
-    top: -19%;
-    left: 1%;
-    animation: cloudMovingLoopLeft 50s linear infinite;
+  width: 40%;
+  top: -19%;
+  left: 1%;
+  animation: cloudMovingLoopLeft 50s linear infinite;
 }
 
 .lightcloud2 {
-    width: 28%;
-    top: -10%;
-    left: 28%;
-    animation: cloudMovingLoopLeft 40s linear infinite;
+  width: 28%;
+  top: -10%;
+  left: 28%;
+  animation: cloudMovingLoopLeft 40s linear infinite;
 }
 
 .lightcloud3 {
-    width: 27%;
-    top: -15%;
-    left: 48%;
-    animation: cloudMovingLoopLeft 30s linear infinite;
+  width: 27%;
+  top: -15%;
+  left: 48%;
+  animation: cloudMovingLoopLeft 30s linear infinite;
 }
 
 .lightcloud4 {
-    width: 30%;
-    top: -16%;
-    left: 52%;
-    animation: cloudMovingLoopRight 50s linear infinite;
+  width: 30%;
+  top: -16%;
+  left: 52%;
+  animation: cloudMovingLoopRight 50s linear infinite;
 }
 .lightcloud5 {
-    width: 32%;
-    top: -9%;
-    left: 70%;
-    animation: cloudMovingLoopRight 47s linear infinite;
+  width: 32%;
+  top: -9%;
+  left: 70%;
+  animation: cloudMovingLoopRight 47s linear infinite;
 }
 
 /* 4. Cloud Animation Dark Mode */
 
 .darkcloud1 {
-    width: 35%;
-    top: -13%;
-    left: 1%;
-    animation: cloudMovingLoopLeft 50s linear infinite;
+  width: 35%;
+  top: -13%;
+  left: 1%;
+  animation: cloudMovingLoopLeft 50s linear infinite;
 }
 
 .darkcloud2 {
-    width: 30%;
-    top: -10%;
-    left: 20%;
-    animation: cloudMovingLoopLeft 40s linear infinite;
+  width: 30%;
+  top: -10%;
+  left: 20%;
+  animation: cloudMovingLoopLeft 40s linear infinite;
 }
 
 .darkcloud3 {
-    width: 30%;
-    top: -10%;
-    left: 42%;
-    animation: cloudMovingLoopRight 30s linear infinite;
+  width: 30%;
+  top: -10%;
+  left: 42%;
+  animation: cloudMovingLoopRight 30s linear infinite;
 }
 
 .darkcloud4 {
-    width: 37%;
-    top: -13%;
-    left: 65%;
-    animation: cloudMovingLoopRight 50s linear infinite;
+  width: 37%;
+  top: -13%;
+  left: 65%;
+  animation: cloudMovingLoopRight 50s linear infinite;
 }
 
 @keyframes starsShining {
-    0% , 100% {
-        opacity: 0.5;
-        filter: brightness(1);
-    }
-    50% {
-        opacity: 1;
-        filter: brightness(1.8);
-    }
+  0%,
+  100% {
+    opacity: 0.5;
+    filter: brightness(1);
+  }
+  50% {
+    opacity: 1;
+    filter: brightness(1.8);
+  }
 }
 
 .dark-stars {
-    position: fixed;
-    top: -5%;
-    left: 0;
-    width: 90%;
-    height: auto;
-    z-index: -3;
-    pointer-events: none;
-    animation: starsShining 4s ease-in-out infinite;
+  position: fixed;
+  top: -5%;
+  left: 0;
+  width: 90%;
+  height: auto;
+  z-index: -3;
+  pointer-events: none;
+  animation: starsShining 4s ease-in-out infinite;
 }
 
 /* 5. Interface */
 
 .interface-control {
-    margin: 0;
-    border: 0;
-    padding: 10px;
+  margin: 0;
+  border: 0;
+  padding: 10px;
 }
 
 .interface-icons {
-    position:absolute;
-    background: none;
-    border: none;
-    padding: none; 
-    transition: transform 0.3s ease;
+  position: absolute;
+  background: none;
+  border: none;
+  padding: none;
+  transition: transform 0.3s ease;
 }
 
 .interface-icons:hover {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .interface-icons img {
-    width: 80px;
-    height: auto;
+  width: 80px;
+  height: auto;
 }
 
 .theme-button {
-    top: 25px;
-    left: 75px;
+  top: 25px;
+  left: 75px;
 }
 
 .sound-button {
-    top: 25px;
-    left: 180px;
+  top: 25px;
+  left: 180px;
 }
 
 /* 6. Main Desktop */
 
 .home-window {
-    width: 850px;
-    height: 490px;
-    top: 100px;
-    left: 85px;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    margin: 100px 0px 0px 85px; 
-    border: solid 4px var(--boxborder);
-    z-index: 2;
+  width: 850px;
+  height: 490px;
+  top: 100px;
+  left: 85px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 100px 0px 0px 85px;
+  border: solid 4px var(--boxborder);
+  z-index: 2;
 }
 
 .main-window-bar {
-    background-color: var(--boxbar);
-    color: white;
-    border-bottom: solid 4px var(--boxborder);
-    padding: 7px 12px;
-    font-family: "Geist Pixel", sans-serif;
-    font-size: 20px; 
+  background-color: var(--boxbar);
+  color: white;
+  border-bottom: solid 4px var(--boxborder);
+  padding: 7px 12px;
+  font-family: "Geist Pixel", sans-serif;
+  font-size: 20px;
 }
 
 .main-window-box {
-    background-color: var(--boxwindow);
-    padding: 60px 0px 60px 50px;
-    display: flex;
-    flex-direction: column;
+  background-color: var(--boxwindow);
+  padding: 60px 0px 60px 50px;
+  display: flex;
+  flex-direction: column;
 }
 
 .main-window-box h1 {
-    margin-top: 0;
-    padding-left: 15px;
-    color: var(--fonts);
-    font-family: "Roboto Mono", monospace;
-    font-size: 55px;
+  margin-top: 0;
+  padding-left: 15px;
+  color: var(--fonts);
+  font-family: "Roboto Mono", monospace;
+  font-size: 55px;
 }
 
 .main-window-box p {
-    margin-top: 0;
-    padding-left: 15px;
-    color: var(--fonts);
-    font-family: "Roboto Mono", monospace;
-    font-size: 20px;
+  margin-top: 0;
+  padding-left: 15px;
+  color: var(--fonts);
+  font-family: "Roboto Mono", monospace;
+  font-size: 20px;
 }
 
 .nome-azul {
-    color: var(--name);
+  color: var(--name);
 }
 
 .main-icon-button {
-    background: none;
-    border: none;
-    padding: 2%;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 105px;
-    font-weight: bold;
-    gap: 0px;
-    transition: transform 0.5s ease;
+  background: none;
+  border: none;
+  padding: 2%;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 105px;
+  font-weight: bold;
+  gap: 0px;
+  transition: transform 0.5s ease;
 }
 
 .main-icon-button:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .icon-container {
-    display: flex;       
-    flex-direction: row; 
-    gap: 80px;
-    margin-top: 1%;
-    margin-left: 2%;
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+  margin-top: 1%;
+  margin-left: 2%;
 }
 
 .main-icon-button img {
-    width: 125px;
-    height: auto;
-    margin-bottom: 5px;
+  width: 125px;
+  height: auto;
+  margin-bottom: 5px;
 }
 
 .name-icon {
-    margin-top: 0%;
-    color: var(--fonts);
-    font-family: "Geist Pixel", sans-serif;
-    font-size: 17px;
+  margin-top: 0%;
+  color: var(--fonts);
+  font-family: "Geist Pixel", sans-serif;
+  font-size: 17px;
 }
 
 /* 7. About me */
 
 .about-window {
-    width: 820px;
-    height: 495px;
-    position: absolute;
-    top: 40px;
-    left: 150px;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    margin: 100px 0px 0px 85px; 
-    border: solid 4px var(--boxborder);
+  width: 820px;
+  height: 495px;
+  position: absolute;
+  top: 40px;
+  left: 150px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 100px 0px 0px 85px;
+  border: solid 4px var(--boxborder);
 }
 
 .about-window-bar {
-    background-color: var(--boxbar);
-    color: white;
-    display: flex;
-    flex-shrink: 0;
-    border-bottom: solid 4px var(--boxborder);
-    padding: 7px 12px;
-    font-family: "Geist Pixel", sans-serif;
-    font-size: 20px; 
+  background-color: var(--boxbar);
+  color: white;
+  display: flex;
+  flex-shrink: 0;
+  border-bottom: solid 4px var(--boxborder);
+  padding: 7px 12px;
+  font-family: "Geist Pixel", sans-serif;
+  font-size: 20px;
 }
 
 .about-window-box {
-    background-color: var(--boxwindow);
-    padding: 60px 50px 32px 50px;
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto;
+  background-color: var(--boxwindow);
+  padding: 60px 50px 32px 50px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
 }
 
 .about-window-box h2 {
-    margin-top: 0;
-    padding-left: 15px;
-    color: var(--fonts);
-    font-family: "Roboto Mono", monospace;
-    font-size: 55px;
+  margin-top: 0;
+  padding-left: 15px;
+  color: var(--fonts);
+  font-family: "Roboto Mono", monospace;
+  font-size: 55px;
 }
 
 .about-window-box p {
-    margin-top: 0;
-    padding-left: 15px;
-    color: var(--fonts);
-    font-family: "Roboto Mono", monospace;
-    font-size: 20px;
+  margin-top: 0;
+  padding-left: 15px;
+  color: var(--fonts);
+  font-family: "Roboto Mono", monospace;
+  font-size: 20px;
 }
-
 
 /* 8. Links */
 
 .links-window {
-    width: 600px;
-    height: 450px;
-    position: absolute;
-    top: 50px;
-    left: 95px;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    margin: 100px 0px 0px 85px; 
-    border: solid 4px var(--boxborder);
+  width: 600px;
+  height: 450px;
+  position: absolute;
+  top: 50px;
+  left: 95px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 100px 0px 0px 85px;
+  border: solid 4px var(--boxborder);
 }
 
 .links-window-bar {
-    background-color: var(--boxbar);
-    color: white;
-    display: flex;
-    flex-shrink: 0;
-    border-bottom: solid 4px var(--boxborder);
-    padding: 7px 12px;
-    font-family: "Geist Pixel", sans-serif;
-    font-size: 20px; 
+  background-color: var(--boxbar);
+  color: white;
+  display: flex;
+  flex-shrink: 0;
+  border-bottom: solid 4px var(--boxborder);
+  padding: 7px 12px;
+  font-family: "Geist Pixel", sans-serif;
+  font-size: 20px;
 }
 
 .links-window-box {
-    background-color: var(--boxwindow);
-    padding: 60px 50px 198px 50px;
-    display: flex;
-    flex-direction: column;
+  background-color: var(--boxwindow);
+  padding: 60px 50px 198px 50px;
+  display: flex;
+  flex-direction: column;
 }
 
 .links-window-box p {
-    margin-top: 0;
-    border: solid 3px var(--linksborder);
-    border-radius: 8px;
-    padding: 20px;
-    color: var(--fonts);
-    font-family: "Nunito", sans-serif;
-    font-size: 17px;
-    text-align: center;
+  margin-top: 0;
+  border: solid 3px var(--linksborder);
+  border-radius: 8px;
+  padding: 20px;
+  color: var(--fonts);
+  font-family: "Nunito", sans-serif;
+  font-size: 17px;
+  text-align: center;
 }
 
 /* 9. Portfolio */
 
 .portfolio-window {
-    width: 890px;
-    height: 590px;
-    position: absolute;
-    top: -30px;
-    left: 195px;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    margin: 100px 0px 0px 85px; 
-    border: solid 4px var(--boxborder);
+  width: 890px;
+  height: 590px;
+  position: absolute;
+  top: -30px;
+  left: 195px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 100px 0px 0px 85px;
+  border: solid 4px var(--boxborder);
 }
 
 .portfolio-window-bar {
-    background-color: var(--boxbar);
-    color: white;
-    display: flex;
-    flex-shrink: 0;
-    border-bottom: solid 4px #46506c;
-    padding: 7px 12px;
-    font-family: "Geist Pixel", sans-serif;
-    font-size: 20px; 
+  background-color: var(--boxbar);
+  color: white;
+  display: flex;
+  flex-shrink: 0;
+  border-bottom: solid 4px #46506c;
+  padding: 7px 12px;
+  font-family: "Geist Pixel", sans-serif;
+  font-size: 20px;
 }
 
 .portfolio-window-box {
-    background-color: var(--boxwindow);
-    padding: 60px 50px 250px 50px;
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto;
+  background-color: var(--boxwindow);
+  padding: 60px 50px 250px 50px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
 }
 
 .portfolio-window-box h3 {
-    padding-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 .caption-style {
-    text-align: left;
-    color: var(--fonts);
-    font-family: "Roboto Mono", monospace;
-    font-weight:480;
-    font-size: 25px;
+  text-align: left;
+  color: var(--fonts);
+  font-family: "Roboto Mono", monospace;
+  font-weight: 480;
+  font-size: 25px;
 }
 
 .portfolio-work-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding-bottom: 30px;
-    gap: 10px;
-    
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom: 30px;
+  gap: 10px;
 }
 
 .portfolio-work {
-    border: solid 3px var(--linksborder);
-    border-radius: 8px;
-    padding: 8px;
-    color: var(--fonts);
-    font-family: "Nunito", sans-serif;
-    font-size: 15px;
-    transition: transform 0.3s ease;
+  border: solid 3px var(--linksborder);
+  border-radius: 8px;
+  padding: 8px;
+  color: var(--fonts);
+  font-family: "Nunito", sans-serif;
+  font-size: 15px;
+  transition: transform 0.3s ease;
 }
 
 .portfolio-work:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .portfolio-window-text {
-    text-align: center;
-    color: var(--fonts);
-    font-family: "Nunito", sans-serif;
-    font-size: 20px;
+  text-align: center;
+  color: var(--fonts);
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
 }
-
 
 /* 10. Contact */
 
 .contact-window {
-    width: 690px;
-    height: 620px;
-    position: absolute;
-    top: -50px;
-    left: 320px;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    margin: 100px 0px 0px 85px; 
-    border: solid 4px var(--boxborder);
+  width: 690px;
+  height: 620px;
+  position: absolute;
+  top: -50px;
+  left: 320px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 100px 0px 0px 85px;
+  border: solid 4px var(--boxborder);
 }
 
 .contact-window-bar {
-    background-color: var(--boxbar);
-    color: white;
-    display: flex;
-    flex-shrink: 0;
-    border-bottom: solid 4px var(--boxborder);
-    padding: 7px 12px;
-    font-family: "Geist Pixel", sans-serif;
-    font-size: 20px; 
+  background-color: var(--boxbar);
+  color: white;
+  display: flex;
+  flex-shrink: 0;
+  border-bottom: solid 4px var(--boxborder);
+  padding: 7px 12px;
+  font-family: "Geist Pixel", sans-serif;
+  font-size: 20px;
 }
 
 .contact-window-box {
-    background-color: var(--boxwindow);
-    padding: 60px 50px 445px 50px;
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto;
+  background-color: var(--boxwindow);
+  padding: 60px 50px 445px 50px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
 }
 
 .contact-window-box h2 {
-    color: var(--fonts);
-    font-family: "Roboto Mono", monospace;
-    font-size: 30px;
-    text-align: center;
-    padding-bottom: 15px;
+  color: var(--fonts);
+  font-family: "Roboto Mono", monospace;
+  font-size: 30px;
+  text-align: center;
+  padding-bottom: 15px;
 }
 
 .contact-window-box p {
-    color: var(--fonts);
-    font-family: "Roboto Mono", monospace;
-    font-size: medium;
-    text-align: center;
-    padding-bottom: 15px;
+  color: var(--fonts);
+  font-family: "Roboto Mono", monospace;
+  font-size: medium;
+  text-align: center;
+  padding-bottom: 15px;
 }
 
 /* 11. Close Button */
 
 .close-window-button {
-    color:white;
-    background: none;
-    margin-left: auto;
-    border: none;
-    padding: 0px 0px;
-    font-family: "Roboto Mono", monospace;
-    font-size:20px;
-    transition: transform 0.3s ease;
+  color: white;
+  background: none;
+  margin-left: auto;
+  border: none;
+  padding: 0px 0px;
+  font-family: "Roboto Mono", monospace;
+  font-size: 20px;
+  transition: transform 0.3s ease;
 }
 
 .close-window-button:hover {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 /* 12. Changing windows */
 
-.about-window, .links-window, .portfolio-window, .contact-window {
-    position: absolute;
-    z-index: 2; 
+.about-window,
+.links-window,
+.portfolio-window,
+.contact-window {
+  position: absolute;
+  z-index: 2;
 }
 
 .window-focus {
-    z-index: 10 !important;
+  z-index: 10 !important;
 }
 
 /* 13. Preloader */
 
 #preloader {
-    position: fixed;
-    background-color: #fafafa;
-    width: 100%;
-    height: 100%;
-    z-index: 99;
-    transition: opacity 0.5s ease, visibility 0.5s ease;
+  position: fixed;
+  background-color: #fafafa;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  transition:
+    opacity 0.5s ease,
+    visibility 0.5s ease;
 }
 
 .loader-icon {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 40%;
-    left: 50%;
-    width: 70px;
-    height: 70px;
-    background-image: url('../img/preloader.gif');
-    z-index: 120;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 40%;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  background-image: url("../img/preloader.gif");
+  z-index: 120;
 }
 
-/* 14. Hidden for now */
+/* 14. Responsivo Viewport */
+
+/* 15. Hidden for now */
 
 .hidden {
-    display: none;
+  display: none;
 }
