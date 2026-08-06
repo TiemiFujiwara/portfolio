@@ -10,7 +10,7 @@
 
   <!--Bootstrap-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
@@ -18,38 +18,155 @@
   <!--CSS-->
   <link rel="stylesheet" href="assets/css/custom.css" />
 
+  <!--FontsAwesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
+    integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <!--GoogleFonts-->
 
 
-  <!-- Themify icon -->
-  <link href="assets/themify-icons/themify-icons.css" rel="stylesheet" type="text/css">
+
 </head>
 
 <body>
   <!--Header-->
   <header>
+    <!--Theme Button-->
+    <button class="themes">
+      <img alt="Light mode button" class="" src="assets/img/icons/lighticon.png">
+      <img alt="Dark mode button" class="hidden" src="assets/img/icons/darkicon.png">
+    </button>
     <!-- Vai conter uma ilustração com um pequeno texto cumprimentando o usuario e um botão de descubra mais que desce para o sobre mim/about-->
-    <!-- Logo abaixo terá uma nav bar que quando for para baixo, vai se tornar um menu hamburguer-->
+    <p>Olá! Eu me chamo...</p>
+    <h1>Tiemi Fujiwara</h1>
+    <button>
+      <a href="" class="btn btn-mobile">DESCUBRA</a>
+    </button>
+    <div class="first-page hidden">
+      <img src="assets/img/rascunho.png">
+    </div>
   </header>
 
-  <!--Seção "Sobre" vai conter:
-  Introdução + Redes como: LinkedIn e etc
-  O que desenvolvo
-  Formação Academica
-  Idioma
-  Outros Interesses
-  -->
+  <!-- Logo abaixo terá uma nav bar que quando for para baixo, vai se tornar um menu hamburguer-->
+  <nav class="navbar">
+    <img src="assets/img/logo.png" alt="Logo Tiemi" class="logo">
 
-  <!--Seção "Portfolio" vai conter:
-  Ferramentas que eu uso
-  Galeria de Ilustrações + Modals de cada um e um link para o instagram
-  Projetos Web
-  -->
+    <button class="btn btn-mobile">
+      <i class="fa-solid fa-bars"></i>
+    </button>
 
-  <!--Seção "Contato" vai conter:
-  Paragrafo contextualizando o formato
-  Formulario para enviar o email
-  -->
+    <ul>
+      <li>
+        <a href="#intro">Introdução</a>
+      </li>
+      <li>
+        <a href="#about">Sobre</a>
+      </li>
+      <li>
+        <a href="#portfolio">Portfolio</a>
+      </li>
+      <li>
+        <a href="contact">Contato</a>
+      </li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="intro">
+      <div class="text-container">
+        <h2 class="title">Introdução</h2>
+        <p class="paragraphy"></p>
+      </div>
+    </section>
+
+    <div class="drawing-division">
+      <!--Desenho que dividirá as seções-->
+    </div>
+
+    <!--Seção "Sobre" vai conter:
+    Introdução + Redes como: LinkedIn e etc
+    O que desenvolvo
+    Formação Academica
+    Idioma
+    Outros Interesses
+    -->
+    <section id="about">
+      <div class="text-container">
+        <h2 class="title">O que eu faço</h2>
+        <ul class="paragraphy-list">
+          <li></li>
+        </ul>
+      </div>
+      <div class="text-container">
+        <h2 class="title">Competências</h2>
+        <ul class="paragraphy-list">
+          <li></li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="drawing-division">
+      <!--Desenho que dividirá as seções-->
+    </div>
+
+    <!--Seção "Portfolio" vai conter:
+    Ferramentas que eu uso
+    Galeria de Ilustrações + Modals de cada um e um link para o instagram
+    Projetos Web
+    -->
+
+    <section id="portfolio">
+      <div class="text-container">
+        <h2 class="title">Portfolio</h2>
+      </div>
+      <div class="art-gallery">
+        <!--Artes com modals-->
+      </div>
+      <div class="text-container">
+        <h2 class="title">Idioma</h2>
+        <ul>
+          <li>Língua Nativa: Português</li>
+          <li>Inglês: C1 Avançado</li>
+        </ul>
+      </div>
+      <div class="text-container">
+        <h2>Formação Acadêmica</h2>
+        <img alt="Logo da Pontifícia Universidade Católica de Campinas" src="assets/img/logo-puc.jpg" />
+        <p>Cursando Design Digital</p>
+        <p>Pontifícia Universidade Católica de Campinas 2024</p>
+      </div>
+    </section>
+
+    <div class="drawing-division">
+      <!--Desenho que dividirá as seções-->
+    </div>
+
+    <!--Seção "Contato" vai conter:
+    Paragrafo contextualizando o formato
+    Formulario para enviar o email
+    -->
+
+    <section id="contact">
+      <div class="text-container">
+        <h2 class="title">Contato</h2>
+        <p class="paragraphy"></p>
+      </div>
+      <div class="row top-pad sub-icon">
+        <form class="form-container">
+          <input class="form-control" type="text" name="name" placeholder="Nome" required>
+          <input class="form-control" type="text" name="subject" placeholder="Assunto" required>
+          <input class="form-control" type="email" name="email" placeholder="E-mail" required>
+          <textarea class="form-control" name="message" rows="4" placeholder="Mensagem" required></textarea>
+          <button type="submit" class="btn custom-btn-2">Enviar</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div></div>
+    </footer>
+  </main>
 </body>
 
 </html>

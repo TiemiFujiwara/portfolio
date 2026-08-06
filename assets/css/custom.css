@@ -11,15 +11,8 @@
 /*  */
 
 :root {
-    --desktopbackground: linear-gradient(to bottom, #4b99ff,#ffc96c,#fff490);
-    --hillback: linear-gradient(to bottom, #8ed577,#54943d,#285518);
-    --hillfront: linear-gradient(to bottom, #71b759,#3d762a);
-    --boxborder: #46506c; 
-    --boxbar: #1f2538;
-    --boxwindow: rgb(255, 255, 255);
-    --fonts: #2D3650;
-    --name: #5a83ff;
-    --linksborder: #b7c0d8;
+    --mainbackground:#f8fbff;
+    --navbar:#aaacb2; 
 }
 
 html.dark {
@@ -35,4 +28,28 @@ html.dark {
 }
 
 /* Mobile First */
+body{
+    background-color: var(--mainbackground);
+}
 
+.themes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    background: none;
+    border: none;
+    padding: none; 
+    transition: transform 0.3s ease;
+}
+
+.themes img{
+    width: 4em;
+    height: auto;
+}
+
+/* Hidden */
+
+.hidden {
+    display: none;
+}
