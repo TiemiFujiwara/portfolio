@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "tiemi-fujiwara"
-  }
+    "default": "tiemi-fujiwara-462cd"
+  },
+  "targets": {},
+  "etags": {}
 }

@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tiemi's Desktop</title>
+  <title>Tiemi Fujiwara | Designer Digital</title>
   <link href="assets/img/iconsite.png" rel="icon" type="image/x-icon" />
   <meta name="robots" content="noindex" />
 
@@ -31,52 +31,56 @@
 
 <body>
   <!--Header-->
-  <header>
+  <header class="header-display x-wrapper">
     <!--Theme Button-->
     <button class="themes">
       <img alt="Light mode button" class="" src="assets/img/icons/lighticon.png">
       <img alt="Dark mode button" class="hidden" src="assets/img/icons/darkicon.png">
     </button>
     <!-- Vai conter uma ilustração com um pequeno texto cumprimentando o usuario e um botão de descubra mais que desce para o sobre mim/about-->
-    <p>Olá! Eu me chamo...</p>
-    <h1>Tiemi Fujiwara</h1>
+    <p class="greetings">Olá! Eu me chamo...</p>
+    <h1 class="main-name">Tiemi Fujiwara</h1>
     <button>
       <a href="" class="btn btn-mobile">DESCUBRA</a>
     </button>
-    <div class="first-page hidden">
+    <div class="first-page">
+      <div class="circle-bg"></div>
       <img src="assets/img/rascunho.png">
     </div>
   </header>
 
   <!-- Logo abaixo terá uma nav bar que quando for para baixo, vai se tornar um menu hamburguer-->
-  <nav class="navbar">
+  <div class="navbar">
     <img src="assets/img/logo.png" alt="Logo Tiemi" class="logo">
+    <nav class="navlist">
+      <button class="btn">
+        <i class="fa-solid fa-bars"></i>
+      </button>
 
-    <button class="btn btn-mobile">
-      <i class="fa-solid fa-bars"></i>
-    </button>
+      <ul>
+        <li>
+          <a href="#intro">Introdução</a>
+        </li>
+        <li>
+          <a href="#about">Sobre</a>
+        </li>
+        <li>
+          <a href="#portfolio">Portfolio</a>
+        </li>
+        <li>
+          <a href="contact">Contato</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
 
-    <ul>
-      <li>
-        <a href="#intro">Introdução</a>
-      </li>
-      <li>
-        <a href="#about">Sobre</a>
-      </li>
-      <li>
-        <a href="#portfolio">Portfolio</a>
-      </li>
-      <li>
-        <a href="contact">Contato</a>
-      </li>
-    </ul>
-  </nav>
-
-  <main>
+  <main class="x-wrapper">
     <section id="intro">
       <div class="text-container">
         <h2 class="title">Introdução</h2>
-        <p class="paragraphy"></p>
+        <p class="paragraphy">Sou estudante de Design Digital e ilustradora, com foco na criação de soluções visuais
+          claras e bem estruturadas. Meu trabalho une ilustração e design para desenvolver projetos que equilibram
+          estética e funcionalidade.</p>
       </div>
     </section>
 
@@ -95,13 +99,21 @@
       <div class="text-container">
         <h2 class="title">O que eu faço</h2>
         <ul class="paragraphy-list">
-          <li></li>
+          <li>Ilustração</li>
+          <li>Identidade Visual</li>
+          <li>Design Gráfico</li>
         </ul>
       </div>
       <div class="text-container">
         <h2 class="title">Competências</h2>
         <ul class="paragraphy-list">
-          <li></li>
+          <li>Ibis Paint X</li>
+          <li>InDesign</li>
+          <li>Illustrator</li>
+          <li>Canva</li>
+          <li>AfterEffects</li>
+          <li>AlightMotion</li>
+          <li>Figma</li>
         </ul>
       </div>
     </section>
