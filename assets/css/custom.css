@@ -13,8 +13,8 @@
 /*  */
 
 :root {
-    --mainbackground:#f8fbff;
-    --navbar:#BFCBD8;
+    --mainbackground: #f8fbff;
+    --navbar: #BFCBD8;
     --fadedfonts: #6673A7;
     --normalfonts: #364372ed;
     --mainnames: #2a54a2;
@@ -23,10 +23,10 @@
 }
 
 html.dark {
-    --desktopbackground: linear-gradient(to bottom, #312735,#AD7062,#FBB248,#ffe415);
-    --hillback: linear-gradient(to bottom, #423D4F,#110f1b);
-    --hillfront: linear-gradient(to bottom, #423D4F,#1a1825);
-    --boxborder: #FFF8C6; 
+    --desktopbackground: linear-gradient(to bottom, #312735, #AD7062, #FBB248, #ffe415);
+    --hillback: linear-gradient(to bottom, #423D4F, #110f1b);
+    --hillfront: linear-gradient(to bottom, #423D4F, #1a1825);
+    --boxborder: #FFF8C6;
     --boxbar: #0F061A;
     --boxwindow: #1C162E;
     --fonts: #FFF8C6;
@@ -36,7 +36,7 @@ html.dark {
 
 /* Mobile First */
 
-body{
+body {
     background-color: var(--mainbackground);
     width: 100%;
     min-height: 100vh;
@@ -62,17 +62,17 @@ button {
     width: 100%;
 }
 
-.themes{
+.themes {
     display: flex;
     justify-content: center;
     align-items: center;
-    position:relative;
+    position: relative;
     background: none;
-    border: none; 
+    border: none;
     transition: transform 0.3s ease;
 }
 
-.themes img{
+.themes img {
     width: 4rem;
     height: auto;
 }
@@ -126,20 +126,20 @@ button {
     border-top-left-radius: 150px;
     border-top-right-radius: 150px;
     z-index: 0;
-    
+
 }
 
 .navbar {
     background-color: var(--navbar);
     padding: 10px 10px;
     position: sticky;
-    top:0;
+    top: 0;
     z-index: 5;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    .navlist a{
+    .navlist a {
         text-decoration: none;
         color: inherit;
     }
@@ -155,7 +155,7 @@ button {
         color: var(--normalfonts);
     }
 
-    .navlist ul{
+    .navlist ul {
         display: flex;
         flex-direction: column;
         position: absolute;
@@ -171,7 +171,7 @@ button {
         transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
     }
 
-    .navlist.active ul{
+    .navlist.active ul {
         max-height: 300px;
         opacity: 1;
     }
@@ -180,7 +180,7 @@ button {
 
 /*Mobile - Main*/
 
-.x-wrapper{
+.x-wrapper {
     max-width: 100%;
     overflow-x: hidden;
 }
@@ -191,7 +191,7 @@ button {
     height: 10vw;
     min-height: 150px;
     max-height: 200px;
-    object-fit: cover;
+    object-fit: contain;
     object-position: bottom;
     display: block;
 }
@@ -214,7 +214,7 @@ button {
     padding-top: 3rem;
 }
 
-.academicbg img{
+.academicbg img {
     position: relative;
     width: 100%;
     height: 10vw;
@@ -238,6 +238,150 @@ button {
 /*Mobile - Footer*/
 
 
+/*Desktop (min-width: 992px)*/
+
+@media (min-width: 992px) {
+
+    .x-wrapper {
+        max-width: 1140px;
+        margin: auto;
+    }
+
+    .header-display {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        background-color: var(--mainbackground);
+        padding: 20px 20px 0 20px;
+        position: relative;
+        width: 100%;
+    }
+
+    .themes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background: none;
+        border: none;
+        transition: transform 0.3s ease;
+    }
+    
+    .themes img {
+        width: 3rem;
+        height: auto;
+    }
+
+    .greetings {
+        font-size: 1rem;
+        color: var(--fadedfonts);
+        margin-top: 15px;
+        margin-bottom: 8px;
+    }
+
+    .main-name {
+        font-size: 2rem;
+        color: var(--mainnames);
+        margin-bottom: 1.5rem;
+    }
+
+    .btn-mobile {
+        display: inline-block;
+        background-color: var(--discovermorebutton);
+        color: var(--mainbackground);
+        border-radius: 12px;
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+
+    .first-page {
+        display: flex;
+        position: relative;
+        width: 310px;
+        max-width: 310px;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .circle-bg {
+        opacity: 0;
+    }
+
+    .first-page img {
+        width: 240px;
+        height: auto;
+    }
+
+    .navlist ul {
+        background-color: var(--navbar);
+        opacity: 1;
+        transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+    }
+
+    .drawing-division img {
+        position: relative;
+        width: 100%;
+        height: 10vw;
+        min-height: 400px;
+        max-height: 500px;
+        object-fit: contain;
+        object-position: bottom;
+        display: block;
+    }
+
+    .academicbg img {
+        width: 400px;
+        height: 160px;
+        padding: 1rem;
+        right: 6rem;
+        position: relative;
+        object-fit: contain;
+    }
+
+    .mbintro {
+        margin: none;
+        padding: 3rem;
+        padding-top: 6rem;
+    }
+
+    .mbabout {
+        margin: none;
+        padding: 3rem;
+        padding-top: 4rem;
+    }
+
+    .mbportfolio {
+        margin: none;
+        padding: 3rem;
+        padding-top: 4rem;
+    }
+
+    .academicbg img {
+        position: relative;
+        width: 100%;
+        height: 10vw;
+        min-height: 170px;
+        max-height: 200px;
+        object-fit: contain;
+        right: 22rem;
+        object-position: bottom;
+        display: block;
+    }
+
+    .mbcontact {
+        margin: none;
+        padding: 3rem;
+        padding-top: 4rem;
+    }
+
+    .subsection {
+        padding-bottom: 2.5rem;
+    }
+
+}
 
 /* Hidden */
 
