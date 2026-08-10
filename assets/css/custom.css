@@ -17,6 +17,7 @@
     --navbar: #BFCBD8;
     --fadedfonts: #6673A7;
     --normalfonts: #364372ed;
+    --titlefonts: #375b91;
     --mainnames: #2a54a2;
     --discovermorebutton: #4475e8f8;
 
@@ -78,6 +79,7 @@ button {
 }
 
 .greetings {
+    font-family: "Nunito", sans-serif;
     font-size: 1.3rem;
     color: var(--fadedfonts);
     margin-top: 15px;
@@ -85,13 +87,17 @@ button {
 }
 
 .main-name {
+    font-family: "Lato", sans-serif;
+    font-weight: bolder;
     font-size: 2.5rem;
     color: var(--mainnames);
     margin-bottom: 1.5rem;
 }
 
-.btn-mobile {
+.btn-primary {
     display: inline-block;
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
     background-color: var(--discovermorebutton);
     color: var(--mainbackground);
     border-radius: 12px;
@@ -112,7 +118,7 @@ button {
     position: relative;
     display: block;
     z-index: 2;
-    width: 100%;
+    width: 106%;
     height: auto;
     padding-top: 2.2rem;
 }
@@ -131,7 +137,7 @@ button {
 
 .navbar {
     background-color: var(--navbar);
-    padding: 10px 10px;
+    padding: 8px 8px;
     position: sticky;
     top: 0;
     z-index: 5;
@@ -190,16 +196,40 @@ button {
     width: 100%;
     height: 10vw;
     min-height: 150px;
-    max-height: 200px;
+    max-height: 150px;
     object-fit: contain;
     object-position: bottom;
     display: block;
 }
 
+.title {
+    font-family: "Mulish", sans-serif;
+    font-weight: bold;
+    font-size: 2.3rem;
+    color: var(--titlefonts);
+}
+
+.paragraphy {
+    font-family: "Mulish", sans-serif;
+    font-size: 1.2rem;
+    color: var(--normalfonts);
+    padding-top: 1rem;
+    margin: none;
+}
+
+.paragraphy-list {
+    font-family: "Lato", sans-serif;
+    font-size: 1.2rem;
+    color: var(--normalfonts);
+    padding-top: 1rem;
+    margin: none;
+}
+
 .mbintro {
     margin: none;
     padding: 2rem;
-    padding-top: 3rem;
+    padding-top: 5rem;
+    padding-bottom: 4rem;
 }
 
 .mbabout {
@@ -220,7 +250,7 @@ button {
     height: 10vw;
     min-height: 170px;
     max-height: 200px;
-    object-fit: cover;
+    object-fit: contain;
     object-position: bottom;
     display: block;
 }
