@@ -16,6 +16,7 @@
     --mainbackground:#f8fbff;
     --navbar:#BFCBD8;
     --fadedfonts: #6673A7;
+    --normalfonts: #364372ed;
     --mainnames: #2a54a2;
     --discovermorebutton: #4475e8f8;
 
@@ -134,22 +135,109 @@ button {
     position: sticky;
     top:0;
     z-index: 5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    .navlist {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    .navlist a{
+        text-decoration: none;
+        color: inherit;
     }
 
     .logo {
         width: 180px;
     }
+
+    .btn {
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        color: var(--normalfonts);
+    }
+
+    .navlist ul{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        gap: 1.8rem;
+        top: 99%;
+        left: 0;
+        width: 100%;
+        background-color: var(--navbar);
+        padding: 2.5rem 3rem 2.5rem 4rem;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+    }
+
+    .navlist.active ul{
+        max-height: 300px;
+        opacity: 1;
+    }
+
 }
+
+/*Mobile - Main*/
 
 .x-wrapper{
     max-width: 100%;
     overflow-x: hidden;
 }
+
+.drawing-division img {
+    position: relative;
+    width: 100%;
+    height: 10vw;
+    min-height: 150px;
+    max-height: 200px;
+    object-fit: cover;
+    object-position: bottom;
+    display: block;
+}
+
+.mbintro {
+    margin: none;
+    padding: 2rem;
+    padding-top: 3rem;
+}
+
+.mbabout {
+    margin: none;
+    padding: 2rem;
+    padding-top: 3rem;
+}
+
+.mbportfolio {
+    margin: none;
+    padding: 2rem;
+    padding-top: 3rem;
+}
+
+.academicbg img{
+    position: relative;
+    width: 100%;
+    height: 10vw;
+    min-height: 170px;
+    max-height: 200px;
+    object-fit: cover;
+    object-position: bottom;
+    display: block;
+}
+
+.mbcontact {
+    margin: none;
+    padding: 2rem;
+    padding-top: 3rem;
+}
+
+.subsection {
+    padding-bottom: 1.5rem;
+}
+
+/*Mobile - Footer*/
+
+
 
 /* Hidden */
 
