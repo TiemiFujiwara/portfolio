@@ -170,7 +170,7 @@ button {
         left: 0;
         width: 100%;
         background-color: var(--navbar);
-        padding: 2.5rem 3rem 2.5rem 4rem;
+        padding: 0 3rem 0 4rem;
         max-height: 0;
         opacity: 0;
         overflow: hidden;
@@ -180,6 +180,8 @@ button {
     .navlist.active ul {
         max-height: 300px;
         opacity: 1;
+        padding: 2.5rem 3rem 2.5rem 4rem;
+        transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
     }
 
 }
