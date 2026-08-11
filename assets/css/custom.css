@@ -194,9 +194,9 @@ button {
 .drawing-division img {
     position: relative;
     width: 100%;
-    height: 10vw;
-    min-height: 150px;
-    max-height: 150px;
+    height: 20vw;
+    min-height: 120px;
+    max-height: 100px;
     object-fit: contain;
     object-position: bottom;
     display: block;
@@ -214,6 +214,7 @@ button {
     font-size: 1.2rem;
     color: var(--normalfonts);
     padding-top: 1rem;
+    padding-bottom: 1rem;
     margin: none;
 }
 
@@ -253,6 +254,35 @@ button {
     object-fit: contain;
     object-position: bottom;
     display: block;
+}
+
+
+.academicdate {
+    display: inline;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    width: 5rem;
+}
+
+.yearperiod {
+    background-color: black;
+    color: white;
+    font-size: 0.70rem;
+    padding: 0.5rem 1rem;
+}
+
+.academictext {
+    display: block;
+    padding-top: 1rem;
+    font-size: 1.4rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+}
+
+.universityname {
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: 'Nunito';
 }
 
 .mbcontact {
@@ -298,7 +328,7 @@ button {
         border: none;
         transition: transform 0.3s ease;
     }
-    
+
     .themes img {
         width: 3rem;
         height: auto;
@@ -399,6 +429,34 @@ button {
         right: 22rem;
         object-position: bottom;
         display: block;
+    }
+
+    .academicdate {
+        display: inline;
+        gap: 1rem;
+        margin-bottom: 1rem;
+        width: 5rem;
+    }
+
+    .yearperiod {
+        background-color: black;
+        color: white;
+        font-size: 0.70rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .academictext {
+        display: block;
+        padding: 1rem;
+        font-size: 1.2rem;
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+    }
+
+    .universityname {
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: 'Nunito';
     }
 
     .mbcontact {
