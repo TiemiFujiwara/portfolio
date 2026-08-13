@@ -1,10 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
   const btnBurger = document.getElementById('btnhamburger');
-  const navlist = document.querySelector('.navlist');
+  const navList = document.querySelector('.navlist');
+  const navLinks = document.querySelectorAll('.navlist a');
 
-  if (btnBurger && navlist) {
+
+  if (btnBurger && navList) {
     btnBurger.addEventListener('click', () => {
-      navlist.classList.toggle('active');
+      navList.classList.toggle('active');
+    });
+
+    navLinks.forEach(links => {
+      links.addEventListener('click', () => {
+        navList.classList.remove('active');
+      });
     });
   }
 });

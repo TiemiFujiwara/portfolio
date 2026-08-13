@@ -22,7 +22,9 @@
   <!--GoogleFonts-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+    rel="stylesheet">
 
 
 </head>
@@ -30,26 +32,29 @@
 <body>
   <!--Header-->
   <header class="header-display x-wrapper">
+
     <!--Theme Button-->
     <button class="themes">
       <img alt="Light mode button" class="" src="assets/img/icons/lighticon.png">
       <img alt="Dark mode button" class="hidden" src="assets/img/icons/darkicon.png">
     </button>
+
     <p class="greetings">Olá! Eu me chamo...</p>
     <h1 class="main-name">Tiemi Fujiwara</h1>
-    <button>
-      <a href="#intro" class="btn btn-primary">DESCUBRA</a>
-    </button>
+
+    <a href="#intro" class="btn btn-primary">DESCUBRA</a>
+
     <div class="first-page">
       <div class="circle-bg"></div>
       <img src="assets/img/rascunho.png">
     </div>
   </header>
 
+  <!-- Nav bar -->
   <div class="navbar">
     <img src="assets/img/logo.png" alt="Logo Tiemi" class="logo">
     <nav class="navlist">
-      <button class="btn d-md-none" id="btnhamburger" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+      <button class="btn d-md-none" id="btnhamburger" type="button" aria-label="Abrir menu">
         <i class="fa-solid fa-bars"></i>
       </button>
 
@@ -137,20 +142,25 @@
           <li>Inglês: C1 Avançado</li>
         </ul>
       </div>
+
+      <!--Formação Academica-->
       <div class="text-container subsection academicbg">
         <h2 class="title">Formação Acadêmica</h2>
         <div class="academiccontainer">
-          <img alt="Logo da Pontifícia Universidade Católica de Campinas" src="assets/img/logo-puc.jpg" />
-          <div class="academicdate">  
-            <span class="yearperiod">2024-2028 | ATUALMENTE</span>
+          <img alt="Logo da Pontifícia Universidade Católica de Campinas" src="assets/img/logo-puc.jpg" class="puclogo" />
+          <div class="academicdetails">
+            <div class="academicdate">
+              <span class="yearperiod">2024-2028 | ATUALMENTE</span>
+            </div>
+            <div class="academictext">
+              <p>
+                <span class="fa-solid fa-suitcase"></span>
+                Cursando Design Digital
+              </p>
+            </div>
+            <p class="universityname">Pontifícia Universidade Católica de Campinas</p>
           </div>
-          <div class="academictext">
-            <p>
-            <span class="fa-solid fa-suitcase"></span>
-            Cursando Design Digital</p>
-          </div>
-          <p class="universityname">Pontifícia Universidade Católica de Campinas</p>
-        </div>  
+        </div>
       </div>
     </section>
 
@@ -169,7 +179,8 @@
     <section id="contact" class="mbcontact">
       <div class="text-container">
         <h2 class="title">Contato</h2>
-        <p class="paragraphy">Para garantir que nenhuma mensagem se perca, centralizei o atendimento por e-mail. Envie sua dúvida pelo
+        <p class="paragraphy">Para garantir que nenhuma mensagem se perca, centralizei o atendimento por e-mail. Envie
+          sua dúvida pelo
           formulário abaixo e retornarei com toda a paciência!</p>
       </div>
       <div class="row top-pad sub-icon">

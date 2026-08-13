@@ -246,13 +246,13 @@ button {
 .mbabout {
     margin: none;
     padding: 2rem;
-    padding-top: 3rem;
+    padding-top: 6rem;
 }
 
 .mbportfolio {
     margin: none;
     padding: 2rem;
-    padding-top: 3rem;
+    padding-top: 6rem;
 }
 
 .academicbg img {
@@ -262,7 +262,7 @@ button {
     min-height: 170px;
     max-height: 200px;
     object-fit: contain;
-    object-position: bottom;
+    object-position: left;
     display: block;
 }
 
@@ -278,7 +278,7 @@ button {
     background-color: black;
     color: white;
     font-size: 0.70rem;
-    padding: 0.5rem 1rem;
+    padding: 0.4rem 1rem;
 }
 
 .academictext {
@@ -463,9 +463,9 @@ button {
         width: 400px;
         height: 160px;
         padding: 1rem;
-        left: -15rem;
         position: relative;
         object-fit: contain;
+        object-position: left;
     }
 
     .mbintro {
@@ -493,8 +493,7 @@ button {
         min-height: 170px;
         max-height: 200px;
         object-fit: contain;
-        right: 22rem;
-        object-position: bottom;
+        object-position: left;
         display: block;
     }
 
@@ -630,20 +629,53 @@ button {
         position: relative;
         width: 100%;
         height: 10vw;
-        min-height: 400px;
-        max-height: 500px;
+        min-height: 300px;
+        max-height: 400px;
         object-fit: contain;
         object-position: bottom;
         display: block;
     }
 
+
     .academicbg img {
-        width: 400px;
-        height: 160px;
-        padding: 1rem;
-        right: 6rem;
         position: relative;
+        width: 100%;
+        height: 60vw;
+        min-height: 300px;
+        max-height: 300px;
         object-fit: contain;
+        object-position: left;
+        display: block;
+    }
+
+
+    .academicdate {
+        display: inline;
+        gap: 1rem;
+        margin-bottom: 1rem;
+        width: 5rem;
+    }
+
+    .yearperiod {
+        background-color: black;
+        color: white;
+        font-size: 0.70rem;
+        padding: 0.4rem 1rem;
+    }
+
+    .academictext {
+        display: block;
+        padding-top: 9rem;
+        font-size: 1.4rem;
+        font-family: 'Lato', sans-serif;
+        font-weight: 500;
+    }
+
+    .universityname {
+        font-size: 1rem;
+        font-weight: 300;
+        font-family: 'Nunito';
+        padding-left: 2rem;
     }
 
     .mbintro {
