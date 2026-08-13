@@ -30,10 +30,7 @@
     --titlefonts: #375b91;
     --mainnames: #2a54a2;
     --discovermorebutton: #4475e8f8;
-
 }
-
-html.dark {}
 
 /* 2. Mobile First */
 
@@ -382,7 +379,7 @@ button {
     }
 
     .circle-bg {
-        opacity: 0;
+        opacity: 1;
     }
 
     .first-page img {
@@ -615,7 +612,7 @@ button {
     }
 
     .first-page img {
-        width: 340px;
+        width: 285px;
         height: auto;
     }
 
