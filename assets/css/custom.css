@@ -5,12 +5,20 @@
     2.1 Mobile - Hero Section 
     2.2 Mobile - Navigation Bar
     2.3 Mobile - Main
-    2.4 Mobile - Portfolio Art Gallery
-3. Tablets and Ipads
-    3.1 Mobile - Hero Section 
-    3.2 Mobile - Navigation Bar
-    3.3 Mobile - Main
-    3.4 Mobile - Portfolio Art Gallery
+    2.4 Mobile - Portfolio Art Gallery + Modals
+    2.5 Mobile - 
+3. Tablets and Ipads (min-width: 640px)
+    3.1 Tablets and Ipads - Hero Section 
+    3.2 Tablets and Ipads - Navigation Bar
+    3.3 Tablets and Ipads - Main
+    3.4 Tablets and Ipads - Portfolio Art Gallery + Modals
+    3.5 Tablets and Ipads - 
+4. Desktop (min-width: 992px)
+    4.1 Desktop - Hero Section 
+    4.2 Desktop - Navigation Bar
+    4.3 Desktop - Main
+    4.4 Desktop - Portfolio Art Gallery + Modals
+    4.5 Mobile - 
 */
 
 * {
@@ -30,6 +38,7 @@
     --titlefonts: #375b91;
     --mainnames: #2a54a2;
     --discovermorebutton: #4475e8f8;
+    --backgroundportfolio: #5b8edf;
 }
 
 /* 2. Mobile First */
@@ -302,9 +311,27 @@ button {
     padding-bottom: 1.5rem;
 }
 
-/* 2.4 Mobile - Portfolio Art Gallery */
+/* 2.4 Mobile - Portfolio Art Gallery + Modals */
 
+.art-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
 
+.artitem {
+    aspect-ratio: 1 / 1;
+    background-color: var(--backgroundportfolio);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.artitem img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 1rem;
+}
 
 /*Mobile - Footer*/
 
