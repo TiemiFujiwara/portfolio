@@ -157,11 +157,12 @@ button {
 
     .navlist a {
         text-decoration: none;
-        color: inherit;
+        color: var(--mainnames);
     }
 
     .logo {
-        width: 180px;
+        width: 200px;
+        padding-left: 2.5rem;
     }
 
     .btn {
@@ -416,7 +417,7 @@ button {
 
 @media (min-width: 640px) {
 
-    /* 3.1 Mobile - Hero Section */
+    /* 3.1 Tablets and Ipads - Hero Section */
 
     .x-wrapper {
         max-width: 1140px;
@@ -491,63 +492,30 @@ button {
         height: auto;
     }
 
-    /* 3.2 Mobile - Navigation Bar */
+    /* 3.2 Tablets and Ipads - Navigation Bar */
 
-    .navbar {
-        background-color: var(--navbar);
-        padding: 8px 8px;
-        position: sticky;
-        top: 0;
-        z-index: 5;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        .navlist a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .logo {
-            width: 180px;
-        }
-
-        .btn {
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            color: var(--normalfonts);
-        }
-
-        .navlist ul {
-            display: flex;
-            flex-direction: column;
-            position: absolute;
-            gap: 1.8rem;
-            top: 99%;
-            left: 0;
-            width: 100%;
-            background-color: var(--navbar);
-            padding: 0 3rem 0 4rem;
-            max-height: 0;
-            opacity: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
-            list-style: none;
-            font-family: 'Nunito', sans-serif;
-            font-weight: 600;
-
-        }
-
-        .navlist.active ul {
-            max-height: 300px;
-            opacity: 1;
-            padding: 2.5rem 3rem 2.5rem 4rem;
-            transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
-        }
+    #btnhamburger {
+        display: none;
     }
 
-    /* 3.3 Mobile - Main */
+    .navbar .navlist ul{
+        display: flex;
+        flex-direction: row;
+        position: static;
+        gap: 2rem;
+        padding: 1rem 2.5rem 0 0;
+        max-height: none;
+        background-color: transparent;
+        opacity: 1;
+        overflow: visible;
+    }
+
+    .navlist a {
+        font-size: 1rem;
+        transition: color 0.2 ease;
+    }
+
+    /* 3.3 Tablets and Ipads - Main */
 
     .drawing-division img {
         position: relative;
