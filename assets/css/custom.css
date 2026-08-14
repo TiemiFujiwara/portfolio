@@ -18,7 +18,7 @@
     4.2 Desktop - Navigation Bar
     4.3 Desktop - Main
     4.4 Desktop - Portfolio Art Gallery + Modals
-    4.5 Mobile - 
+    4.5 Desktop - 
 */
 
 * {
@@ -333,6 +333,83 @@ button {
     border-radius: 1rem;
 }
 
+.modal-fullscreen {
+    background: none;
+    border: none;
+    padding: 2rem 0 0 0;
+    transition: transform 0.2s ease, opacity 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem 0 2rem;
+}
+
+.modal-content {
+    background-color: var(--mainbackground);
+    border: none;
+    padding: 1rem 1.5rem;
+    transition: transform 0.2s ease, opacity 0.5s ease;
+}
+
+.modal-title {
+    font-family: 'Mulish', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--titlefonts);
+}
+
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+}
+
+.modal-body img {
+    width: auto;
+    height: auto;
+    max-height: 50vh;
+    object-fit: contain;
+}
+
+.modal-body p {
+    font-family: 'Mulish', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--normalfonts);
+    margin-top: 3rem;
+    line-height: 1.5rem;
+}
+
+.text-start {
+    padding-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-close {
+    font-size: 1.6rem;
+    opacity: 0.8;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* Animação para fazer o modal aparecer por baixo */
+
+.modal.fade .modal-dialog {
+    transform: translate(0,100vh);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease-out;
+    opacity: 0;
+}
+
+.modal.show .modal-dialog {
+    transform: translate(0,0);
+    opacity: 1;
+}
+
+
 /*Mobile - Footer*/
 
 /* 3. Tablets and Ipads (min-width: 640px) */
@@ -559,9 +636,32 @@ button {
         padding-bottom: 2.5rem;
     }
 
-    /* 3.4 Mobile - Portfolio Art Gallery */
+    /* 3.4 Tablets and Ipads - Portfolio Art Gallery */
 
+    .art-gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.2rem;
+    }
 
+    .modal-fullscreen {
+        background: none;
+        border: none;
+        padding: 2rem 0 0 0;
+        transition: transform 0.2s ease, opacity 0.5s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 2rem 0 2rem;
+    }
+
+    .modal-content {
+        background-color: var(--mainbackground);
+        border: none;
+        padding: 1rem 1.5rem;
+        transition: transform 0.2s ease, opacity 0.5s ease;
+    }
 
 }
 
@@ -574,6 +674,8 @@ button {
         max-width: 1140px;
         margin: auto;
     }
+
+    /* 4.1 Desktop - Hero Section */
 
     .header-display {
         display: flex;
@@ -643,11 +745,15 @@ button {
         height: auto;
     }
 
+    /* 4.2 Desktop - Navigation Bar */
+
     .navlist ul {
         display: inline;
         background-color: var(--navbar);
         padding: 1rem;
     }
+
+    /* 4.3 Desktop - Main */
 
     .drawing-division img {
         position: relative;
@@ -768,6 +874,14 @@ button {
 
     .subsection {
         padding-bottom: 2.5rem;
+    }
+
+    /* 4.4 Desktop - Portfolio Art Gallery + Modals */
+
+    .art-gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.4rem;
     }
 
 }
