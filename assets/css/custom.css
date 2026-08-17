@@ -134,6 +134,7 @@ button {
     z-index: 2;
     width: 120%;
     height: auto;
+    object-position: bottom;
 }
 
 .circle-bg {
@@ -336,7 +337,7 @@ button {
 .custom-btn-2 {
     background-color: var(--discovermorebutton);
     color: var(--mainbackground);
-    font-family: 'Mulish',sans-serif;
+    font-family: 'Mulish', sans-serif;
     font-weight: bold;
     font-size: 1.1rem;
     padding: 1rem 1.5rem;
@@ -437,13 +438,13 @@ button {
 /* Animação para fazer o modal aparecer por baixo */
 
 .modal.fade .modal-dialog {
-    transform: translate(0,100vh);
+    transform: translate(0, 100vh);
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease-out;
     opacity: 0;
 }
 
 .modal.show .modal-dialog {
-    transform: translate(0,0);
+    transform: translate(0, 0);
     opacity: 1;
 }
 
@@ -476,13 +477,15 @@ button {
     .header-display {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         flex-direction: column;
         text-align: center;
         background-color: var(--mainbackground);
         padding: 20px 20px 0 20px;
         position: relative;
         width: 100%;
+        min-height: 100dvh;
+        overflow: hidden;
     }
 
     .themes {
@@ -547,7 +550,7 @@ button {
         display: none;
     }
 
-    .navbar .navlist ul{
+    .navbar .navlist ul {
         display: flex;
         flex-direction: row;
         position: static;
@@ -564,7 +567,7 @@ button {
         transition: color 0.2 ease;
     }
 
-        .logo {
+    .logo {
         width: 200px;
         padding-left: 2.5rem;
     }
@@ -703,13 +706,15 @@ button {
     .header-display {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         flex-direction: column;
         text-align: center;
         background-color: var(--mainbackground);
         padding: 20px 20px 0 20px;
         position: relative;
         width: 100%;
+        min-height: 100dvh;
+        overflow: hidden;
     }
 
     .themes {
@@ -775,7 +780,7 @@ button {
         background-color: var(--navbar);
         padding: 1rem;
     }
-    
+
 
     /* 4.3 Desktop - Main */
 
