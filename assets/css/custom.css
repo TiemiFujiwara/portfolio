@@ -137,20 +137,28 @@ button {
     object-position: bottom;
 }
 
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
 .circle-bg {
     position: absolute;
     background-color: #6b9fff;
-    width: 340px;
-    height: 320px;
+    width: 400px;
+    height: 400px;
     bottom: 0;
-    border-top-left-radius: 150px;
-    border-top-right-radius: 150px;
-    border-bottom-left-radius: 150px;
-    border-bottom-right-radius: 150px;
+    border-radius: 300px;
     z-index: 0;
+    animation: floatAnimation 4s ease-in-out infinite;
 }
-
-
 
 /* 2.2 Mobile - Navigation Bar */
 
