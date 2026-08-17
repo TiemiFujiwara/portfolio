@@ -65,13 +65,15 @@ button {
 .header-display {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
     text-align: center;
     background-color: var(--mainbackground);
     padding: 20px 20px 0 20px;
     position: relative;
     width: 100%;
+    min-height: 100dvh;
+    overflow: hidden;
 }
 
 .themes {
@@ -81,7 +83,7 @@ button {
     position: relative;
     background: none;
     border: none;
-    transition: transform 0.3s ease;
+    padding-top: 2rem;
 }
 
 .themes img {
@@ -113,6 +115,7 @@ button {
     color: var(--mainbackground);
     border-radius: 12px;
     padding: 1rem 2rem;
+    margin: 1.5rem;
     font-size: 1rem;
 }
 
@@ -129,9 +132,8 @@ button {
     position: relative;
     display: block;
     z-index: 2;
-    width: 110%;
+    width: 120%;
     height: auto;
-    padding-top: 1rem;
 }
 
 .circle-bg {
@@ -146,6 +148,8 @@ button {
     border-bottom-right-radius: 150px;
     z-index: 0;
 }
+
+
 
 /* 2.2 Mobile - Navigation Bar */
 
@@ -760,7 +764,7 @@ button {
     }
 
     .first-page img {
-        width: 285px;
+        width: 320px;
         height: auto;
     }
 
