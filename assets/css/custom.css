@@ -6,19 +6,22 @@
     2.2 Mobile - Navigation Bar
     2.3 Mobile - Main
     2.4 Mobile - Portfolio Art Gallery + Modals
-    2.5 Mobile - 
+    2.5 Mobile - Scroll Reveal Animation
+    2.6 
 3. Tablets and Ipads (min-width: 640px)
     3.1 Tablets and Ipads - Hero Section 
     3.2 Tablets and Ipads - Navigation Bar
     3.3 Tablets and Ipads - Main
     3.4 Tablets and Ipads - Portfolio Art Gallery + Modals
-    3.5 Tablets and Ipads - 
+    3.5 Tablets and Ipads - Scroll Reveal Animation
+    3.6 
 4. Desktop (min-width: 992px)
     4.1 Desktop - Hero Section 
     4.2 Desktop - Navigation Bar
     4.3 Desktop - Main
     4.4 Desktop - Portfolio Art Gallery + Modals
-    4.5 Desktop - 
+    4.5 Desktop - Scroll Reveal Animation
+    3.6
 */
 
 * {
@@ -126,21 +129,22 @@ button {
     position: relative;
     display: block;
     z-index: 2;
-    width: 106%;
+    width: 110%;
     height: auto;
-    padding-top: 2.2rem;
+    padding-top: 1rem;
 }
 
 .circle-bg {
     position: absolute;
     background-color: #6b9fff;
-    width: 370px;
-    height: 270px;
+    width: 340px;
+    height: 320px;
     bottom: 0;
     border-top-left-radius: 150px;
     border-top-right-radius: 150px;
+    border-bottom-left-radius: 150px;
+    border-bottom-right-radius: 150px;
     z-index: 0;
-
 }
 
 /* 2.2 Mobile - Navigation Bar */
@@ -162,7 +166,7 @@ button {
 
     .logo {
         width: 200px;
-        padding-left: 2.5rem;
+        padding-left: 1rem;
     }
 
     .btn {
@@ -170,6 +174,7 @@ button {
         border: none;
         font-size: 1.5rem;
         color: var(--normalfonts);
+        padding-right: 1.5rem;
     }
 
     .navlist ul {
@@ -410,6 +415,18 @@ button {
     opacity: 1;
 }
 
+/* 2.5 Mobile - Scroll Reveal Animation */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 /*Mobile - Footer*/
 
@@ -514,6 +531,12 @@ button {
         font-size: 1rem;
         transition: color 0.2 ease;
     }
+
+        .logo {
+        width: 200px;
+        padding-left: 2.5rem;
+    }
+
 
     /* 3.3 Tablets and Ipads - Main */
 
@@ -720,6 +743,7 @@ button {
         background-color: var(--navbar);
         padding: 1rem;
     }
+    
 
     /* 4.3 Desktop - Main */
 
