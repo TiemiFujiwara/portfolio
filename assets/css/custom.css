@@ -115,7 +115,7 @@ button {
     color: var(--mainbackground);
     border-radius: 12px;
     padding: 1rem 2rem;
-    margin: 1.5rem;
+    margin: 0 0 4rem 0;
     font-size: 1rem;
 }
 
