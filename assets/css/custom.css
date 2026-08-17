@@ -313,6 +313,34 @@ button {
     padding-top: 3rem;
 }
 
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+.form-container .form-control {
+    border: 2px solid var(--fadedfonts);
+    border-radius: 10px;
+    padding: 0.8rem 1rem;
+    font-family: "Mulish", sans-serif;
+    font-size: 1rem;
+    color: var(--fadedfonts);
+}
+
+.custom-btn-2 {
+    background-color: var(--discovermorebutton);
+    color: var(--mainbackground);
+    font-family: 'Mulish',sans-serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 1rem 1.5rem;
+    border-radius: 0.7rem;
+    align-items: flex-start;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
 .subsection {
     padding-bottom: 1.5rem;
 }
