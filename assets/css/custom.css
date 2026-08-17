@@ -697,7 +697,7 @@ button {
 @media (min-width: 992px) {
 
     .x-wrapper {
-        max-width: 1140px;
+        max-width: 100%;
         margin: auto;
     }
 
@@ -733,25 +733,26 @@ button {
     }
 
     .greetings {
-        font-size: 1rem;
+        font-size: 1.5rem;
         color: var(--fadedfonts);
         margin-top: 15px;
         margin-bottom: 8px;
     }
 
     .main-name {
-        font-size: 2rem;
+        font-size: 3.5rem;
         color: var(--mainnames);
+        font-family: 'Lato',sans-serif;
         margin-bottom: 1.5rem;
     }
 
-    .btn-mobile {
+    .btn-primary {
         display: inline-block;
         background-color: var(--discovermorebutton);
         color: var(--mainbackground);
         border-radius: 12px;
         padding: 1rem 2rem;
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     .first-page {
