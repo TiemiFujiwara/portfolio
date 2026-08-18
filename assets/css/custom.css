@@ -7,21 +7,21 @@
     2.3 Mobile - Main
     2.4 Mobile - Portfolio Art Gallery + Modals
     2.5 Mobile - Scroll Reveal Animation
-    2.6 
+    2.6 Mobile - Parallax Mouse - Disabled
 3. Tablets and Ipads (min-width: 640px)
     3.1 Tablets and Ipads - Hero Section 
     3.2 Tablets and Ipads - Navigation Bar
     3.3 Tablets and Ipads - Main
     3.4 Tablets and Ipads - Portfolio Art Gallery + Modals
     3.5 Tablets and Ipads - Scroll Reveal Animation
-    3.6 
+    3.6 Tablets and Ipads - Parallax Mouse - Disabled
 4. Desktop (min-width: 992px)
     4.1 Desktop - Hero Section 
     4.2 Desktop - Navigation Bar
     4.3 Desktop - Main
     4.4 Desktop - Portfolio Art Gallery + Modals
-    4.5 Desktop - Scroll Reveal Animation
-    3.6
+    4.5 Desktop - Parallax Mouse - Enabled
+    4.6 Desktop - 
 */
 
 * {
@@ -141,9 +141,11 @@ button {
     0% {
         transform: translateY(0px);
     }
+
     50% {
         transform: translateY(-15px);
     }
+
     100% {
         transform: translateY(0px);
     }
@@ -288,7 +290,7 @@ button {
     max-height: 180px;
     margin: 0 auto 1.5rem auto;
     object-fit: contain;
-    object-position: left;
+    object-position: center;
 }
 
 
@@ -467,6 +469,13 @@ button {
 .reveal.active {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* 2.6 Mobile - Parallax Mouse - Disabled */
+
+.parallaxmouse {
+    opacity: 0;
+    position: absolute;
 }
 
 /*Mobile - Footer*/
@@ -695,6 +704,13 @@ button {
         border: none;
         padding: 1rem 1.5rem;
         transition: transform 0.2s ease, opacity 0.5s ease;
+    }
+
+    /* 3.6 Tablets and Ipads - Parallax Mouse - Disabled */
+
+    .parallaxmouse {
+        opacity: 0;
+        position: absolute;
     }
 
 }
@@ -930,6 +946,106 @@ button {
         grid-template-columns: repeat(3, 1fr);
         gap: 1.4rem;
     }
+
+    /* 4.5 Tablets and Ipads - Parallax Mouse - Disabled */
+
+    .header-display {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .parallaxmouse {
+        opacity: 1;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        pointer-events: none; 
+        z-index: 1;
+    }
+
+    .frontlayer, .midlayer, .backlayer {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+
+    .backlayer { 
+        z-index: 1; 
+    }
+    
+    .midlayer  { 
+        z-index: 2; 
+    }
+
+    .frontlayer { 
+        z-index: 3; 
+    }
+
+    .flowerleftfront {
+        position: absolute;
+        width: 400px;
+        height: auto;
+        top: 40%;
+        left: 3%;
+    }
+
+    .butterflyrightfront {
+        position: absolute;
+        width: 400px;
+        height: auto;
+        top: -5%;
+        right: 5%;
+    }
+
+    .butterflyleftmid {
+        position: absolute;
+        width: 250px;
+        height: auto;
+        top: 23%;
+        left: 22%;
+    }
+
+    .leafleftmid {
+        position: absolute;
+        width: 230px;
+        height: auto;
+        top: 11%;
+        left:3%;
+    }
+
+    .flowerrightmid {
+        position: absolute;
+        width: 300px;
+        height: auto;
+        top: 35%;
+        right: 25%;
+    }
+
+    .flowerleftback {
+        position: absolute;
+        width: 250px;
+        height: auto;
+        top: -3%;
+        left: 16%;
+    }
+
+    .butterflyrightback {
+        position: absolute;
+        width: 270px;
+        height: auto;
+        top: 60%;
+        right: 16%;
+    }
+
+    .leafrightback {
+        position: absolute;
+        width: 240px;
+        height: auto;
+        top: 46%;
+        right: 7%;
+    }
+
 
 }
 
