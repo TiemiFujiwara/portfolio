@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tiemi-fujiwara-462cd.web.app/sitemap.xml

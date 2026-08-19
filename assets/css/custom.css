@@ -881,13 +881,13 @@ button {
     .mbabout {
         margin: none;
         padding: 0 15rem 5rem 15rem;
-        padding-top: 4rem;
+        padding-top:8rem;
     }
 
     .mbportfolio {
         margin: none;
         padding: 0 15rem 5rem 15rem;
-        padding-top: 4rem;
+        padding-top: 8rem;
     }
 
     .academicbg img {
@@ -933,7 +933,7 @@ button {
     .mbcontact {
         margin: none;
         padding: 0 15rem 5rem 15rem;
-        padding-top: 4rem;
+        padding-top: 6rem;
     }
 
     .subsection {
